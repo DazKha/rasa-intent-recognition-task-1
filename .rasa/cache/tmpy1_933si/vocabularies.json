@@ -1,0 +1,31 @@
+{
+  "text": {
+    "hi": 7,
+    "hello": 6,
+    "xin": 16,
+    "chào": 3,
+    "em": 5,
+    "bye": 2,
+    "tạm": 14,
+    "biệt": 1,
+    "anh": 0,
+    "nhận": 10,
+    "được": 17,
+    "hàng": 8,
+    "rồi": 12,
+    "sản": 13,
+    "phẩm": 11,
+    "chất": 4,
+    "lượng": 9,
+    "tốt": 15
+  },
+  "intent": {
+    "greet": 2,
+    "goodbye": 1,
+    "feedback": 0
+  },
+  "response": null,
+  "action_name": null,
+  "action_text": null,
+  "intent_response_key": null
+}

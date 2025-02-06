@@ -1,0 +1,72 @@
+version: "3.1"
+
+nlu:
+- intent: add_transaction
+  examples: |
+    - Tôi đã chi 200k cho ăn uống hôm nay.
+    - Thêm một khoản chi tiêu 500k mua quần áo.
+    - Tôi vừa trả tiền thuê nhà, 5 triệu.
+    - Ghi lại giúp tôi một giao dịch 300k đi siêu thị.
+    - Thêm vào danh sách chi tiêu 150k tiền cà phê sáng.
+    - Đăng ký một giao dịch: 200k cho sửa xe.
+    - Tôi đã chi 1 triệu cho vé máy bay, lưu lại giúp tôi.
+    - Ghi lại một khoản thu nhập 10 triệu từ lương.
+    - Tôi vừa nhận được 2 triệu tiền thưởng.
+    - Lưu giúp tôi một khoản chi 400k cho bữa tối.
+    - Tôi vừa chuyển khoản 500k cho bạn tôi.
+    - Ghi nhận 250k tiền xăng xe hôm nay.
+    - Đã thanh toán hóa đơn điện nước 1,2 triệu.
+    - Thêm một khoản chi tiêu 1 triệu cho điện thoại mới.
+    - Hôm nay tôi mua sách hết 300k.
+    - Ghi lại giúp tôi, tôi đã tiêu 450k cho vé xem phim.
+    - Tôi đã trả 2 triệu cho tiền học phí tháng này.
+    - Thêm một giao dịch thu nhập 5 triệu từ công việc freelance.
+    - Tôi mới tiêu 600k mua đồ trang trí nhà.
+    - Ghi nhận 350k cho tiền bảo trì xe máy.
+
+- intent: summarize_transaction
+  examples: |
+    - Tổng chi tiêu của tôi tháng này là bao nhiêu?
+    - Tôi đã tiêu hết bao nhiêu tiền trong tuần này?
+    - Cho tôi xem thống kê chi tiêu tháng trước.
+    - Tôi còn lại bao nhiêu tiền trong tài khoản?
+    - Hiển thị số tiền tôi đã chi cho ăn uống tuần này.
+    - Có thể cho tôi biết tôi đã tiêu bao nhiêu vào mua sắm không?
+    - Tôi muốn xem báo cáo chi tiêu hàng ngày.
+    - Tổng thu nhập của tôi tháng này là bao nhiêu?
+    - Tôi đã tiết kiệm được bao nhiêu trong năm nay?
+    - Hôm nay tôi đã chi bao nhiêu tiền?
+    - Hiện tại tôi đang tiêu tiền vào những khoản nào nhiều nhất?
+    - So sánh chi tiêu tháng này với tháng trước giúp tôi.
+    - Có thể cho tôi biết số tiền tôi đã dành cho giải trí không?
+    - Tổng số tiền tôi đã gửi tiết kiệm là bao nhiêu?
+    - Tôi muốn xem số dư hiện tại của mình.
+    - Lịch sử chi tiêu của tôi trong 3 ngày qua thế nào?
+    - Tôi đã chi tiêu bao nhiêu trong danh mục ăn uống?
+    - Số tiền còn lại trong ngân sách tháng này là bao nhiêu?
+    - Cho tôi danh sách những khoản chi tiêu lớn nhất trong tháng.
+    - Thống kê các khoản thu nhập và chi tiêu của tôi.
+
+- intent: add_transaction+summarize_transaction
+  examples: |
+    - Tôi vừa chi 300k mua cà phê, và tôi muốn xem tổng chi tiêu trong tháng.
+    - Ghi lại giúp tôi 200k tiền ăn sáng, và cho tôi biết tôi đã tiêu bao nhiêu trong tuần.
+    - Tôi vừa nhận 5 triệu tiền lương, và tôi muốn biết tổng thu nhập tháng này.
+    - Tôi đã tiêu 2 triệu mua laptop, có thể cho tôi biết tổng số dư còn lại không?
+    - Ghi nhận 800k mua quần áo, và thống kê giúp tôi chi tiêu tháng này.
+    - Tôi đã gửi tiết kiệm 3 triệu, và tôi muốn xem số dư hiện tại của mình.
+    - Thêm giao dịch 250k tiền xăng, và cho tôi biết tôi đã tiêu bao nhiêu vào phương tiện đi lại.
+    - Tôi vừa mua điện thoại 15 triệu, và tôi muốn so sánh chi tiêu tháng này với tháng trước.
+    - Đã thanh toán 500k hóa đơn điện, tôi còn bao nhiêu trong ngân sách tháng này?
+    - Ghi nhận 1 triệu tiền bảo hiểm, và cho tôi biết tổng chi tiêu trong tuần.
+    - Tôi đã trả 700k tiền thuê nhà, thống kê chi tiêu cố định giúp tôi.
+    - Tôi vừa mua sách 400k, tôi đã tiêu bao nhiêu tiền cho giáo dục tháng này?
+    - Ghi lại 300k mua quà tặng, và thống kê chi tiêu trong danh mục mua sắm.
+    - Tôi đã chuyển khoản 1,2 triệu cho bạn, cho tôi danh sách các giao dịch gần đây.
+    - Đăng ký 5 triệu thu nhập từ kinh doanh, tổng thu nhập của tôi hiện tại là bao nhiêu?
+    - Tôi đã thanh toán 900k tiền internet, chi tiêu của tôi cho hóa đơn dịch vụ là bao nhiêu?
+    - Tôi vừa chi 350k tiền gym, và tôi muốn xem tôi đã chi bao nhiêu cho sức khỏe.
+    - Ghi nhận 150k tiền trà sữa, tôi đã tiêu bao nhiêu vào đồ uống tháng này?
+    - Tôi vừa nạp điện thoại 100k, tổng chi tiêu cho viễn thông của tôi là bao nhiêu?
+    - Đã thanh toán 2 triệu tiền học phí, và tôi muốn biết tổng chi tiêu giáo dục năm nay.
+
