@@ -15,6 +15,11 @@ pipeline:
     intent_split_symbol: "+"
   - name: "RegexFeaturizer"
   - name: "LexicalSyntacticFeaturizer"
+  - name: "CountVectorsFeaturizer"
+  - name: "CountVectorsFeaturizer"
+    analyzer: char_wb
+    min_ngram: 1
+    max_ngram: 4
   - name: "LanguageModelFeaturizer"
     model_name: "bert"
     model_weights: "vinai/phobert-base"
