@@ -1,32 +1,49 @@
-# The config recipe.
-# https://rasa.com/docs/rasa/model-configuration/
 recipe: default.v1
-
-# The assistant project unique identifier
-# This default value must be replaced with a unique assistant name within your deployment
 assistant_id: 20250202-200116-quick-generator
-
-# Configuration for Rasa NLU.
 language: vi
 
 pipeline:
-  - name: "custom_components.vietnamese_tokenizer.VietnameseTokenizer"
-    intent_tokenization_flag: True
-    intent_split_symbol: "+"
+  # Tokenization - Custom tokenizer for Vietnamese
+  - name: "custom_components.underthesea_tokenizer.VietnameseTokenizer"
+    #intent_tokenization_flag: False
+
+  # Feature Extraction
   - name: "RegexFeaturizer"
   - name: "LexicalSyntacticFeaturizer"
   - name: "CountVectorsFeaturizer"
-  - name: "CountVectorsFeaturizer"
-    analyzer: char_wb
+    analyzer: word
     min_ngram: 1
-    max_ngram: 4
+    max_ngram: 3
+
+  # Language Model - Using PhoBERT for Vietnamese
   - name: "LanguageModelFeaturizer"
     model_name: "bert"
     model_weights: "vinai/phobert-base"
     cache_dir: null
-  - name: "DIETClassifier"
-    epochs: 100
-    constrain_similarities: true
-  - name: "EntitySynonymMapper"
 
-policies:
+  # Entity Extraction
+  - name: "RegexEntityExtractor"
+    use_lookup_tables: True
+
+  - name: "CRFEntityExtractor"
+    features:
+      - ["low", "title", "upper"]
+      - ["bias", "low", "prefix5", "prefix2", "suffix5", "suffix3", "suffix2", "upper", "title", "digit", "pattern"]
+      - ["low", "title", "upper"]
+    BILOU_flag: True
+
+  # Intent Classification and Entity Recognition
+  - name: "DIETClassifier"
+    epochs: 150
+    constrain_similarities: True
+    entity_recognition: True
+    intent_classification: True
+    num_transformer_layers: 4
+    transformer_size: 256
+    batch_size: [64, 256]
+    learning_rate: 0.001
+    evaluate_every_number_of_epochs: 15
+    evaluate_on_number_of_examples: 100
+
+  # Entity Normalization
+  - name: "EntitySynonymMapper"
