@@ -3,26 +3,195 @@ version: "3.1"
 nlu:
 - intent: add_transaction
   examples: |
-    - Tôi đã chi 200k cho ăn uống hôm nay.
-    - Thêm một khoản chi tiêu 500k mua quần áo.
-    - Tôi vừa trả tiền thuê nhà, 5 triệu.
-    - Ghi lại giúp tôi một giao dịch 300k đi siêu thị.
-    - Thêm vào danh sách chi tiêu 150k tiền cà phê sáng.
-    - Đăng ký một giao dịch: 200k cho sửa xe.
-    - Tôi đã chi 1 triệu cho vé máy bay, lưu lại giúp tôi.
-    - Ghi lại một khoản thu nhập 10 triệu từ lương.
-    - Tôi vừa nhận được 2 triệu tiền thưởng.
-    - Lưu giúp tôi một khoản chi 400k cho bữa tối.
-    - Tôi vừa chuyển khoản 500k cho bạn tôi.
-    - Ghi nhận 250k tiền xăng xe hôm nay.
-    - Đã thanh toán hóa đơn điện nước 1,2 triệu.
-    - Thêm một khoản chi tiêu 1 triệu cho điện thoại mới.
-    - Hôm nay tôi mua sách hết 300k.
-    - Ghi lại giúp tôi, tôi đã tiêu 450k cho vé xem phim.
-    - Tôi đã trả 2 triệu cho tiền học phí tháng này.
-    - Thêm một giao dịch thu nhập 5 triệu từ công việc freelance.
-    - Tôi mới tiêu 600k mua đồ trang trí nhà.
-    - Ghi nhận 350k cho tiền bảo trì xe máy.
+    - Tôi đã chi [200k](price) cho [ăn uống](pro_name) [hôm nay](date).
+    - Thêm một khoản chi tiêu [500k](price) mua [quần áo](pro_name).
+    - Tôi vừa trả [5 triệu](price) cho [thuê nhà](pro_name).
+    - Ghi lại giúp tôi một giao dịch [300k](price) đi [siêu thị](pro_name).
+    - Thêm vào danh sách chi tiêu [150k](price) tiền [cà phê sáng](pro_name).
+    - Đăng ký một giao dịch: [200k](price) cho [sửa xe](pro_name).
+    - Tôi đã chi [1 triệu](price) cho [vé máy bay](pro_name), lưu lại giúp tôi.
+    - Ghi lại một khoản thu nhập [10 triệu](price) từ [lương](pro_name).
+    - Tôi vừa nhận được [2 triệu](price) tiền [thưởng](pro_name).
+    - Lưu giúp tôi một khoản chi [400k](price) cho [bữa tối](pro_name).
+    - Tôi vừa chuyển khoản [500k](price) cho [bạn tôi](pro_name).
+    - Ghi nhận [250k](price) tiền [xăng xe](pro_name) [hôm nay](date).
+    - Đã thanh toán hóa đơn [điện nước](pro_name) [1,2 triệu](price).
+    - Thêm một khoản chi tiêu [1 triệu](price) cho [điện thoại mới](pro_name).
+    - [Hôm nay](date) tôi mua [sách](pro_name) hết [300k](price).
+    - Ghi lại giúp tôi, tôi đã tiêu [450k](price) cho [vé xem phim](pro_name).
+    - Tôi đã trả [2 triệu](price) cho [học phí](pro_name) [tháng này](date).
+    - Thêm một giao dịch thu nhập [5 triệu](price) từ [freelance](pro_name).
+    - Tôi mới tiêu [600k](price) mua [đồ trang trí nhà](pro_name).
+    - Ghi nhận [350k](price) cho [bảo trì xe máy](pro_name).
+    - Tôi vừa mua một [cuốn sách](pro_name) hết [250k](price), ghi lại giúp tôi.
+    - Thêm vào danh sách chi tiêu [1 triệu](price) tiền [thuê nhà](pro_name) [tháng này](date).
+    - Tôi đã trả [500k](price) tiền [điện](pro_name), ghi nhận giao dịch này.
+    - Lưu giúp tôi một khoản chi [700k](price) mua [giày thể thao](pro_name).
+    - Ghi lại tôi đã tiêu [350k](price) cho một [bữa ăn tối](pro_name) tại [nhà hàng](location).
+    - Tôi vừa nạp [thẻ điện thoại](pro_name) [100k](price), thêm vào giao dịch.
+    - [Hôm nay](date) tôi tiêu [1,5 triệu](price) để [sửa xe](pro_name), lưu vào chi tiêu.
+    - Đăng ký một khoản chi [400k](price) cho [mỹ phẩm](pro_name).
+    - Tôi đã mua [vé xem phim](pro_name) hết [200k](price), thêm vào danh sách chi tiêu.
+    - Ghi lại tôi vừa đặt [khách sạn](pro_name) hết [3 triệu](price).
+    - Tôi mới tiêu [850k](price) để mua [quà sinh nhật](pro_name), thêm vào chi tiêu.
+    - Tôi đã gửi [1 triệu](price) tiền [học phí](pro_name), ghi nhận giao dịch.
+    - Lưu giúp tôi một khoản thu nhập [8 triệu](price) từ [đầu tư](pro_name).
+    - Ghi nhận [500k](price) tiền [xăng](pro_name) cho [tuần này](date).
+    - Tôi vừa đặt [vé máy bay](pro_name) [4 triệu](price), ghi nhận chi tiêu này.
+    - Tôi mới chuyển khoản [3 triệu](price) cho [mẹ](pro_name), lưu lại giúp tôi.
+    - Ghi lại tôi đã mua [laptop mới](pro_name) giá [25 triệu](price).
+    - Tôi đã thanh toán hóa đơn [nước](pro_name) [700k](price), ghi lại chi tiêu này.
+    - Ghi nhận khoản thu nhập [12 triệu](price) từ [lương tháng này](pro_name).
+    - Tôi vừa trả [2 triệu](price) tiền [thuê nhà](pro_name), thêm vào danh sách giao dịch.
+    - Đăng ký một khoản chi [1,2 triệu](price) cho [bảo hiểm xe máy](pro_name).
+    - Tôi đã tiêu [300k](price) mua [đồ ăn vặt](pro_name), lưu vào chi tiêu.
+    - Tôi vừa mua [bàn phím mới](pro_name) [1 triệu](price), ghi nhận giao dịch này.
+    - Thêm [2,5 triệu](price) cho [khóa học online](pro_name) vào danh sách chi tiêu.
+    - Tôi vừa nhận được [15 triệu](price) tiền [thưởng cuối năm](pro_name).
+    - Tôi đã tiêu [450k](price) để mua [đồng hồ](pro_name), ghi lại giúp tôi.
+    - [Hôm nay](date) tôi ăn tối hết [600k](price), ghi vào chi tiêu.
+    - Tôi vừa chuyển khoản [200k](price) tiền [điện thoại](pro_name), ghi nhận giao dịch này.
+    - Tôi đã mua [vé tàu](pro_name) [1 triệu](price), thêm vào danh sách chi tiêu.
+    - Tôi vừa mua [tai nghe mới](pro_name) [2 triệu](price), lưu vào danh sách giao dịch.
+    - Ghi nhận [1,8 triệu](price) tiền [du lịch Đà Lạt](pro_name) [tháng này](date).
+    - Tôi đã chi [900k](price) cho [bảo hiểm sức khỏe](pro_name).
+    - Thêm [350k](price) tiền [ăn trưa](pro_name) [hôm qua](date) vào danh sách.
+    - Tôi vừa trả [2,3 triệu](price) cho [vé concert](pro_name).
+    - Đăng ký khoản thu nhập [7 triệu](price) từ [bán hàng online](pro_name).
+    - Tôi đã tiêu [1,7 triệu](price) mua [máy ảnh](pro_name), lưu lại.
+    - Ghi lại [400k](price) tiền [taxi](pro_name) [tuần trước](date).
+    - Tôi vừa mua [đồ gia dụng](pro_name) hết [800k](price).
+    - Thêm [600k](price) cho [bữa tiệc sinh nhật](pro_name) vào chi tiêu.
+    - Tôi đã trả [1,5 triệu](price) tiền [nha khoa](pro_name).
+    - Ghi nhận [3,5 triệu](price) từ [công việc part-time](pro_name).
+    - Tôi vừa tiêu [250k](price) mua [hoa](pro_name) [hôm nay](date).
+    - Lưu [700k](price) tiền [vé sự kiện](pro_name) vào danh sách.
+    - Tôi đã chi [2 triệu](price) cho [khóa học tiếng Anh](pro_name).
+    - Thêm [1,3 triệu](price) tiền [máy in](pro_name) vào giao dịch.
+    - Tôi vừa nhận [4 triệu](price) từ [hợp đồng freelance](pro_name).
+    - Ghi lại [500k](price) tiền [ăn uống](pro_name) tại [quán quen](location).
+    - Tôi đã trả [800k](price) cho [bảo dưỡng ô tô](pro_name).
+    - Thêm [300k](price) tiền [trà sữa](pro_name) [hôm nay](date).
+    - Tôi vừa mua [vé xe buýt](pro_name) [150k](price), ghi lại.
+    - Ghi nhận [2,8 triệu](price) từ [tiền thưởng dự án](pro_name).
+    - Tôi đã tiêu [1 triệu](price) cho [đồ chơi trẻ em](pro_name).
+    - Thêm [450k](price) tiền [ăn tối](pro_name) tại [Hà Nội](location).
+    - Tôi vừa trả [3 triệu](price) tiền [thuê văn phòng](pro_name).
+    - Ghi lại [200k](price) tiền [đồ ăn sáng](pro_name) [hôm qua](date).
+    - Tôi đã chi [1,2 triệu](price) cho [thiết bị âm thanh](pro_name).
+    - Thêm [600k](price) tiền [vé hội chợ](pro_name) vào danh sách.
+    - Tôi vừa nhận [6 triệu](price) từ [công việc thiết kế](pro_name).
+    - Ghi nhận [350k](price) tiền [đồ uống](pro_name) [tuần này](date).
+    - Tôi đã trả [2,5 triệu](price) cho [tour du lịch](pro_name).
+    - Thêm [1 triệu](price) tiền [đồ điện tử](pro_name) vào chi tiêu.
+    - Tôi vừa mua [ghế sofa](pro_name) [3,2 triệu](price), lưu lại.
+    - Ghi lại [500k](price) tiền [bữa trưa](pro_name) tại [Sài Gòn](location).
+    - Tôi đã chi [700k](price) cho [máy xay sinh tố](pro_name).
+    - Thêm [1,5 triệu](price) tiền [vé tàu cao tốc](pro_name) vào giao dịch.
+    - Tôi vừa nhận [8 triệu](price) từ [lương OT](pro_name).
+    - Ghi nhận [400k](price) tiền [ăn vặt](pro_name) [hôm nay](date).
+    - Tôi đã trả [2 triệu](price) cho [máy giặt](pro_name).
+    - Thêm [300k](price) tiền [vé công viên](pro_name) vào danh sách.
+    - Tôi vừa mua [đồng hồ đeo tay](pro_name) [1,8 triệu](price).
+    - Ghi lại [600k](price) tiền [ăn uống](pro_name) tại [quán hải sản](location).
+    - Tôi đã chi [1 triệu](price) cho [khóa học nấu ăn](pro_name).
+    - Thêm [2,7 triệu](price) tiền [vé máy bay nội địa](pro_name) vào chi tiêu.
+    - Tôi vừa nhận [5 triệu](price) từ [tiền lãi đầu tư](pro_name).
+    - Ghi nhận [450k](price) tiền [bữa tối](pro_name) [thứ Sáu](date).
+    - Vừa chi [180k](price) mua [sách giáo khoa](pro_name) cho con [hôm nay](date).
+    - Thêm khoản chi [450k](price) đi [ăn nhà hàng](pro_name) với gia đình.
+    - Lưu giúp tôi: [825k](price) tiền [mua quần áo](pro_name) tại [UNIQLO](location).
+    - Ghi nhận [75k](price) chi [cà phê sáng](pro_name) [hôm nay](date).
+    - [Buổi tối](date) tôi đã tiêu [320k](price) cho [ăn tối](pro_name) tại [quán ven sông](location).
+    - Hôm qua tôi mua [đôi giày](pro_name) hết [1,2 triệu](price), ghi lại giúp tôi.
+    - Tôi đã thanh toán [950k](price) tiền [khám răng](pro_name) [chiều nay](date).
+    - Bạn ghi lại giúp tôi khoản [2,5 triệu](price) mua [điện thoại](pro_name).
+    - Vừa trả [18 triệu](price) cho [học phí đại học](pro_name) của con.
+    - Thêm cho tôi khoản chi [650k](price) mua [dụng cụ nhà bếp](pro_name).
+    - Tôi đã chi [1,8 triệu](price) sửa [máy giặt](pro_name), ghi vào chi tiêu.
+    - Cho tôi thêm giao dịch [120k](price) [đồ ăn trưa](pro_name) [hôm nay](date).
+    - Vui lòng ghi lại [550k](price) tiền [thuốc men](pro_name) [tháng này](date).
+    - [Tuần trước](date) tôi đã chi [7 triệu](price) cho [tour du lịch](pro_name) [Đà Lạt](location).
+    - Ghi nhận khoản thu [22 triệu](price) từ [lương](pro_name) [tháng 7](date).
+    - Tôi vừa đặt [vé xem hòa nhạc](pro_name) hết [1,75 triệu](price), thêm vào danh sách.
+    - Thêm khoản chi [280k](price) cho [xăng xe máy](pro_name) [hôm qua](date).
+    - [Ngày 15/08](date) tôi đã thanh toán [3,2 triệu](price) tiền [thuê căn hộ](pro_name).
+    - Hãy ghi lại [430k](price) tiền [sách đọc](pro_name) tôi mới mua.
+    - Vừa trả [90k](price) tiền [phí gửi xe](pro_name) [tháng này](date).
+    - Đã chi [235k](price) mua [thức ăn cho thú cưng](pro_name), ghi lại giúp tôi.
+    - Thêm vào chi tiêu [110k](price) tiền [giao hàng nhanh](pro_name) [hôm nay](date).
+    - Tôi vừa nạp [500k](price) vào [tài khoản điện thoại](pro_name).
+    - Ghi lại giúp tôi [150k](price) tiền [phở sáng](pro_name) với gia đình.
+    - Đã thanh toán [680k](price) tiền [internet](pro_name) [tháng 8](date).
+    - Chi [175k](price) mua [hoa](pro_name) tặng sinh nhật bạn, lưu lại giúp tôi.
+    - Thêm [780k](price) tiền [bảo hiểm xe máy](pro_name) vào danh sách chi tiêu.
+    - Tôi vừa mua [quần jean](pro_name) giá [890k](price) tại [Levi's](location).
+    - Ghi lại khoản [270k](price) mua [thuốc cảm](pro_name) [tuần này](date).
+    - Vừa chi [1,35 triệu](price) mua [đồng hồ đeo tay](pro_name) làm quà.
+    - Đăng ký khoản chi [4,7 triệu](price) mua [máy lọc nước](pro_name) cho gia đình.
+    - Lưu giúp tôi [130k](price) tiền [trà sữa](pro_name) với đồng nghiệp.
+    - Thêm [25 triệu](price) tiền [đặt cọc nhà](pro_name) vào danh sách chi tiêu.
+    - Tôi vừa mua [ổ cứng ngoài](pro_name) hết [1,45 triệu](price).
+    - Thêm khoản [850k](price) cho [khám sức khỏe](pro_name) [tuần trước](date).
+    - Ghi nhận [12,5 triệu](price) từ [tiền thưởng](pro_name) [cuối năm](date).
+    - Tôi đã trả [920k](price) cho [sửa chữa xe](pro_name) [hôm qua](date).
+    - Thêm khoản chi [380k](price) cho [đồ dùng học tập](pro_name) của con.
+    - Vừa thanh toán [560k](price) tiền [tiệc sinh nhật](pro_name) tại [nhà hàng](location).
+    - Ghi lại [210k](price) mua [thực phẩm](pro_name) tại [siêu thị](location).
+    - Tôi đã chi [1,65 triệu](price) mua [iPad cũ](pro_name) trên mạng.
+    - Hãy thêm khoản [350k](price) cho [gội đầu spa](pro_name) [chiều qua](date).
+    - Vừa trả [1,9 triệu](price) tiền [sửa điều hòa](pro_name), ghi lại giúp tôi.
+    - Cho tôi đăng ký khoản [16 triệu](price) từ [lương tháng](pro_name).
+    - Tôi đã mua [dầu gội](pro_name) [125k](price) và [sữa tắm](pro_name) [145k](price).
+    - Thêm khoản chi [670k](price) cho [vé xem phim](pro_name) cả gia đình.
+    - Ghi lại [320k](price) tiền [thay pin laptop](pro_name) [hôm nay](date).
+    - Vừa thanh toán [8,5 triệu](price) tiền [khóa học thiết kế](pro_name).
+    - Tôi đã chi [420k](price) mua [đồ thể thao](pro_name) mới.
+    - Thêm [190k](price) tiền [đồ chơi trẻ em](pro_name) vào danh sách.
+    - Ghi nhận [3,8 triệu](price) từ [công việc freelance](pro_name) [tháng này](date).
+    - Tôi đã trả [740k](price) cho [sách tham khảo](pro_name) của con.
+    - Vừa chi [290k](price) cho [bữa trưa văn phòng](pro_name) [hôm nay](date).
+    - Thêm khoản [1,15 triệu](price) mua [máy sấy tóc](pro_name) mới.
+    - Ghi lại [80k](price) tiền [gửi xe tháng](pro_name) tại công ty.
+    - Tôi đã thanh toán [2,7 triệu](price) tiền [điện](pro_name) [mùa hè](date).
+    - Thêm khoản chi [530k](price) mua [quà tặng đồng nghiệp](pro_name).
+    - Vừa mua [đồng phục](pro_name) cho con giá [450k](price).
+    - Ghi nhận [370k](price) tiền [đi chợ](pro_name) [cuối tuần](date).
+    - Tôi vừa trả [1,25 triệu](price) cho [bàn học](pro_name) của con.
+    - Thêm vào chi tiêu [230k](price) tiền [vitamin](pro_name).
+    - Đã chi [820k](price) cho [vé tàu](pro_name) về quê, ghi lại giúp tôi.
+    - Ghi nhận khoản [9,5 triệu](price) từ [bán đồ cũ](pro_name).
+    - Tôi vừa thanh toán [175k](price) tiền [phí ngân hàng](pro_name).
+    - Thêm khoản chi [690k](price) cho [đồ trang trí Tết](pro_name).
+    - Đã trả [410k](price) tiền [khám mắt](pro_name) [chiều qua](date).
+    - Ghi lại [280k](price) tiền [sách nấu ăn](pro_name) tôi mới mua.
+    - Vừa chi [3,2 triệu](price) cho [điện thoại cũ](pro_name) của em.
+    - Thêm khoản [520k](price) mua [dụng cụ làm vườn](pro_name).
+    - Tôi đã trả [950k](price) tiền [nha khoa](pro_name) [tuần trước](date).
+    - Ghi lại [1,75 triệu](price) mua [tủ quần áo](pro_name) cho con.
+    - Vừa thanh toán [260k](price) tiền [bể cá cảnh](pro_name).
+    - Thêm khoản chi [340k](price) cho [vé công viên](pro_name) cuối tuần.
+    - Tôi đã chi [730k](price) mua [quà sinh nhật](pro_name) cho mẹ.
+    - Ghi nhận [14 triệu](price) từ [tiền thưởng dự án](pro_name).
+    - Vừa trả [2,4 triệu](price) tiền [học piano](pro_name) cho con.
+    - Thêm khoản [590k](price) mua [dụng cụ sửa xe](pro_name).
+    - Đã thanh toán [3,6 triệu](price) tiền [sửa nhà tắm](pro_name).
+    - Ghi lại [220k](price) tiền [xăng](pro_name) đi công tác.
+    - Tôi vừa mua [áo khoác](pro_name) giá [1,85 triệu](price).
+    - Thêm khoản chi [490k](price) cho [đồ chơi điện tử](pro_name).
+    - Vừa trả [270k](price) tiền [gội đầu](pro_name) ở [salon](location).
+    - Ghi nhận [310k](price) chi cho [bữa sáng gia đình](pro_name) [cuối tuần](date).
+    - Tôi đã thanh toán [620k](price) tiền [dịch vụ giặt là](pro_name).
+    - Thêm vào danh sách [460k](price) tiền [giày thể thao](pro_name) mới.
+    - Vừa chi [5,8 triệu](price) cho [laptop cũ](pro_name) của con.
+    - Ghi lại [390k](price) tiền [đồ bơi](pro_name) mùa hè.
+    - Tôi đã trả [840k](price) cho [kính mắt](pro_name) mới.
+    - Thêm khoản chi [170k](price) cho [đồ ăn vặt](pro_name) [tuần này](date).
+    - Vừa thanh toán [2,2 triệu](price) tiền [thiết bị nhà thông minh](pro_name).
+    - Ghi nhận [140k](price) tiền [phí đậu xe](pro_name) [tháng này](date).
+    - Tôi đã chi [710k](price) mua [thiết bị thể thao](pro_name).
+    - Thêm khoản [1,95 triệu](price) cho [đồng hồ thông minh](pro_name).
+    - Vừa trả [420k](price) tiền [phụ kiện điện thoại](pro_name).
 
 - intent: summarize_transaction
   examples: |
@@ -30,43 +199,1026 @@ nlu:
     - Tôi đã tiêu hết bao nhiêu tiền trong tuần này?
     - Cho tôi xem thống kê chi tiêu tháng trước.
     - Tôi còn lại bao nhiêu tiền trong tài khoản?
-    - Hiển thị số tiền tôi đã chi cho ăn uống tuần này.
-    - Có thể cho tôi biết tôi đã tiêu bao nhiêu vào mua sắm không?
+    - Hiển thị số tiền tôi đã chi cho [ăn uống](pro_name) tuần này.
+    - Có thể cho tôi biết tôi đã tiêu bao nhiêu vào [mua sắm](pro_name) không?
     - Tôi muốn xem báo cáo chi tiêu hàng ngày.
     - Tổng thu nhập của tôi tháng này là bao nhiêu?
     - Tôi đã tiết kiệm được bao nhiêu trong năm nay?
-    - Hôm nay tôi đã chi bao nhiêu tiền?
+    - [Hôm nay](date) tôi đã chi bao nhiêu tiền?
     - Hiện tại tôi đang tiêu tiền vào những khoản nào nhiều nhất?
     - So sánh chi tiêu tháng này với tháng trước giúp tôi.
-    - Có thể cho tôi biết số tiền tôi đã dành cho giải trí không?
+    - Có thể cho tôi biết số tiền tôi đã dành cho [giải trí](pro_name) không?
     - Tổng số tiền tôi đã gửi tiết kiệm là bao nhiêu?
     - Tôi muốn xem số dư hiện tại của mình.
     - Lịch sử chi tiêu của tôi trong 3 ngày qua thế nào?
-    - Tôi đã chi tiêu bao nhiêu trong danh mục ăn uống?
+    - Tôi đã chi tiêu bao nhiêu trong danh mục [ăn uống](pro_name)?
     - Số tiền còn lại trong ngân sách tháng này là bao nhiêu?
     - Cho tôi danh sách những khoản chi tiêu lớn nhất trong tháng.
     - Thống kê các khoản thu nhập và chi tiêu của tôi.
+    - Tổng chi tiêu của tôi trong tháng này là bao nhiêu tiền?
+    - Tôi đã tiêu bao nhiêu trong 7 ngày vừa qua?
+    - Có thể hiển thị thống kê chi tiêu theo danh mục không?
+    - Tổng số tiền tôi đã tiết kiệm được là bao nhiêu vậy?
+    - Hiện tại tôi còn bao nhiêu tiền trong tài khoản ngân hàng?
+    - Tôi đã chi bao nhiêu tiền cho [ăn uống](pro_name) tuần này?
+    - Cho tôi danh sách các khoản chi tiêu trong tháng 1.
+    - Tôi muốn xem tổng thu nhập của tôi trong năm nay.
+    - Tổng số tiền tôi đã tiêu cho [du lịch](pro_name) là bao nhiêu?
+    - Tôi đã chuyển khoản tổng cộng bao nhiêu tiền trong tháng?
+    - Tôi đã chi tiêu bao nhiêu tiền cho [quần áo](pro_name)?
+    - [Hôm nay](date) tôi đã tiêu bao nhiêu tiền vậy?
+    - Số tiền lớn nhất tôi đã chi trong tháng này là bao nhiêu?
+    - Tôi muốn so sánh chi tiêu tháng này với tháng trước.
+    - Hiển thị các giao dịch có giá trị cao nhất của tôi.
+    - Tổng số tiền tôi đã chi cho hóa đơn [điện nước](pro_name) là bao nhiêu?
+    - Cho tôi biết tôi đã tiêu bao nhiêu vào [giải trí](pro_name).
+    - Tôi đã tiết kiệm được bao nhiêu trong tháng này?
+    - Tôi muốn xem lịch sử chi tiêu của tôi trong 3 tháng qua.
+    - Hiển thị số tiền tôi đã chi cho [phương tiện đi lại](pro_name).
+    - Tổng số tiền tôi đã tiêu trong năm nay là bao nhiêu?
+    - Tôi đã nhận được bao nhiêu tiền từ [công việc freelance](pro_name)?
+    - Tôi còn lại bao nhiêu tiền trong ngân sách tháng này?
+    - Số tiền tôi đã đầu tư trong năm nay là bao nhiêu?
+    - Tôi muốn xem các giao dịch gần đây của tôi.
+    - Tôi đã tiêu bao nhiêu tiền trong danh mục [mua sắm](pro_name)?
+    - Cho tôi danh sách những khoản thu nhập của tôi.
+    - Tôi đã chi bao nhiêu tiền cho [giáo dục và đào tạo](pro_name)?
+    - Hiển thị tổng số tiền tôi đã chi cho [sức khỏe](pro_name).
+    - Tôi muốn xem báo cáo chi tiêu chi tiết của tôi.
+    - Tổng chi phí của tôi trong [tuần trước](date) là bao nhiêu?
+    - Tôi đã tiêu bao nhiêu tiền cho [vé máy bay](pro_name) năm nay?
+    - Cho tôi xem danh sách chi tiêu trong [ tháng 2](date).
+    - Số tiền tôi đã chi cho [xăng xe](pro_name) tuần này là bao nhiêu?
+    - Tôi muốn biết tổng chi tiêu của tôi trong 10 ngày qua.
+    - Hiển thị số tiền tôi đã tiêu cho [thuê nhà](pro_name) năm nay.
+    - Tôi đã tiết kiệm được bao nhiêu tiền từ đầu năm?
+    - Tổng số tiền tôi đã chi cho [bảo hiểm](pro_name) là bao nhiêu?
+    - Cho tôi xem thống kê chi tiêu của tôi trong [tháng trước](date).
+    - Tôi đã chi bao nhiêu tiền cho [đồ điện tử](pro_name)?
+    - Số dư hiện tại trong tài khoản của tôi là bao nhiêu?
+    - Tôi đã tiêu bao nhiêu vào [thực phẩm](pro_name) tháng này?
+    - Tổng thu nhập của tôi từ [lương](pro_name) năm nay là bao nhiêu?
+    - Tôi muốn xem các khoản chi lớn nhất trong tuần này.
+    - Hiển thị số tiền tôi đã chi cho [vé xem phim](pro_name).
+    - Tôi đã tiêu bao nhiêu tiền cho [sửa xe](pro_name) tháng này?
+    - Tổng số tiền tôi đã gửi tiết kiệm trong 6 tháng qua là gì?
+    - Tôi đã chi bao nhiêu tiền vào [mỹ phẩm](pro_name)?
+    - Cho tôi biết tổng chi tiêu của tôi vào [ngày hôm qua](date).
+    - Số tiền tôi đã chi cho [cà phê](pro_name) tuần này là bao nhiêu?
+    - Tôi muốn xem lịch sử thu nhập của tôi trong năm nay.
+    - Tổng chi phí [du lịch](pro_name) của tôi trong năm nay là bao nhiêu?
+    - Tôi đã tiêu bao nhiêu tiền cho [thiết bị công nghệ](pro_name)?
+    - Hiển thị danh sách các khoản chi tiêu của tôi trong [tháng này](date).
+    - Tổng số tiền tôi đã chi cho [ăn tối](pro_name) là bao nhiêu?
+    - Tôi đã nhận được bao nhiêu tiền từ [đầu tư](pro_name)?
+    - Số tiền còn lại trong ngân sách tuần này là bao nhiêu?
+    - Tôi đã tiêu bao nhiêu tiền cho [văn phòng phẩm](pro_name)?
+    - Cho tôi xem tổng chi tiêu của tôi trong [3 ngày qua](date).
+    - Tôi đã chi bao nhiêu tiền vào [khóa học](pro_name)?
+    - Tổng số tiền tôi đã tiêu cho [đồ gia dụng](pro_name) là bao nhiêu?
+    - Tôi muốn biết số tiền tôi đã chi cho [bảo trì xe](pro_name).
+    - Hiển thị thống kê thu nhập của tôi từ [freelance](pro_name).
+    - Tôi đã tiêu bao nhiêu tiền cho [vé tàu](pro_name) năm nay?
+    - Tổng chi tiêu của tôi trong [tuần này](date) là bao nhiêu?
+    - Tôi đã chi bao nhiêu tiền vào [sách](pro_name) tháng này?
+    - Cho tôi xem tổng số tiền tôi đã trả cho [hóa đơn](pro_name).
+    - Tôi đã tiết kiệm được bao nhiêu tiền trong [tháng này](date)?
+    - Số tiền tôi đã chi cho [quà tặng](pro_name) là bao nhiêu?
+    - Tôi muốn xem danh sách chi tiêu của tôi trong [tuần trước](date).
+    - Tổng thu nhập của tôi từ [bán hàng](pro_name) là bao nhiêu?
+    - Tôi đã tiêu bao nhiêu tiền cho [thời trang](pro_name)?
+    - Hiển thị số tiền tôi đã chi cho [đồ uống](pro_name) tháng này.
+    - Tổng chi tiêu cho [ăn uống](pro_name) trong [tháng 6](date) là bao nhiêu?
+    - Thống kê tiền đã chi cho [mua sắm](pro_name) từ [đầu năm](date) đến nay.
+    - Tôi đã tiêu bao nhiêu cho [giáo dục](pro_name) của con trong [quý vừa qua](date)?
+    - Cho tôi xem báo cáo chi tiêu [tuần này](date) theo từng danh mục.
+    - Còn bao nhiêu tiền trong tài khoản [tiết kiệm](pro_name) của tôi?
+    - Tôi đã chi bao nhiêu tiền cho [sức khỏe](pro_name) trong [6 tháng qua](date)?
+    - Hiển thị tổng chi tiêu của tôi trong [tuần trước](date).
+    - Phân tích chi tiêu [điện nước](pro_name) của tôi trong [năm nay](date).
+    - Tôi đã tiêu bao nhiêu cho [mua sắm online](pro_name) [tháng vừa qua](date)?
+    - So sánh chi tiêu [ăn ngoài](pro_name) giữa [tháng này](date) và [tháng trước](date).
+    - Hãy tính tổng thu nhập của tôi từ [tất cả các nguồn](pro_name) trong [năm nay](date).
+    - Tôi đã tiết kiệm được bao nhiêu trong [6 tháng đầu năm](date)?
+    - Hiển thị các khoản chi lớn nhất của tôi trong [tháng 5](date).
+    - Tổng các khoản [chuyển khoản](pro_name) trong [quý 2](date) là bao nhiêu?
+    - Chi tiêu trung bình hàng ngày của tôi trong [tháng này](date) là bao nhiêu?
+    - Tôi đã chi bao nhiêu cho [phương tiện đi lại](pro_name) trong [tháng trước](date)?
+    - Thống kê chi tiêu theo nhóm trong [30 ngày qua](date).
+    - Tỷ lệ chi tiêu cho [giải trí](pro_name) so với tổng chi tiêu [năm nay](date) là bao nhiêu?
+    - Hiển thị tổng thu nhập từ [công việc chính](pro_name) trong [quý vừa qua](date).
+    - Tôi đã chi bao nhiêu tiền cho [mua sắm](pro_name) [tuần này](date)?
+    - Tổng chi phí [sinh hoạt hàng ngày](pro_name) trong [tháng 7](date) là bao nhiêu?
+    - Tôi đã tiêu quá ngân sách [ăn uống](pro_name) trong [tháng này](date) chưa?
+    - Thống kê chi tiêu cho [con cái](pro_name) trong [năm học vừa qua](date).
+    - Cho tôi xem báo cáo thu chi từ [ngày 1](date) đến [ngày 15](date) [tháng này](date).
+    - Tổng tiền [mua sắm online](pro_name) so với [mua tại cửa hàng](pro_name) trong [tháng qua](date)?
+    - Tôi đã chi bao nhiêu cho [sửa chữa nhà cửa](pro_name) [năm nay](date)?
+    - So sánh chi tiêu giữa các tháng trong [quý vừa qua](date).
+    - Hiển thị tổng chi tiêu theo danh mục trong [năm tài chính](date).
+    - Tôi đã thanh toán bao nhiêu tiền [hóa đơn](pro_name) trong [tháng 8](date)?
+    - Thống kê các khoản thu từ [đầu tư](pro_name) trong [năm nay](date).
+    - Tổng chi phí [đi du lịch](pro_name) trong [6 tháng qua](date) là bao nhiêu?
+    - Tôi đã chi bao nhiêu cho [thú cưng](pro_name) trong [quý vừa qua](date)?
+    - Phân tích xu hướng chi tiêu của tôi trong [3 tháng gần đây](date).
+    - Hiển thị tỷ lệ tiết kiệm trên tổng thu nhập [năm nay](date).
+    - Tôi đã chi bao nhiêu cho [mỹ phẩm](pro_name) trong [2 tháng qua](date)?
+    - So sánh chi tiêu [ăn uống](pro_name) trong [tuần này](date) với [tuần trước](date).
+    - Tổng chi phí [đi lại](pro_name) trong [tháng 9](date) là bao nhiêu?
+    - Hiển thị ngân sách còn lại cho [giải trí](pro_name) trong [tháng này](date).
+    - Tôi đã chi bao nhiêu cho [sách vở](pro_name) trong [học kỳ vừa qua](date)?
+    - Thống kê tổng thu nhập từ [mọi nguồn](pro_name) trong [tháng trước](date).
+    - Tổng các khoản [chi cố định](pro_name) trong [quý 3](date) là bao nhiêu?
+    - Phân tích chi tiêu [cuối tuần](date) so với [ngày thường](date) trong [tháng này](date).
+    - Tôi đã chi bao nhiêu cho [dịch vụ trực tuyến](pro_name) trong [năm qua](date)?
+    - So sánh chi tiêu [sức khỏe](pro_name) giữa [năm nay](date) và [năm trước](date).
+    - Thống kê các khoản [chi tiêu không cần thiết](pro_name) trong [tháng vừa qua](date).
+    - Hiển thị tổng chi cho [bảo hiểm](pro_name) trong [năm tài chính](date).
+    - Tôi đã tiết kiệm được bao nhiêu so với [kế hoạch](pro_name) trong [quý vừa qua](date)?
+    - Phân tích tỷ lệ chi tiêu theo nhóm trong [năm nay](date).
+    - Tổng thu nhập từ [công việc tự do](pro_name) trong [6 tháng qua](date) là bao nhiêu?
+    - Tôi đã chi bao nhiêu cho [đồ điện tử](pro_name) trong [năm nay](date)?
+    - Thống kê chi tiêu theo [địa điểm](location) trong [tháng vừa qua](date).
+    - Tổng chi phí [xăng xe](pro_name) trong [quý 2](date) là bao nhiêu?
+    - Hiển thị 10 khoản chi lớn nhất trong [6 tháng qua](date).
+    - Tôi đã tiêu bao nhiêu cho [đồ ăn giao hàng](pro_name) trong [tháng này](date)?
+    - So sánh thu nhập giữa [tháng trước](date) và [tháng này](date).
+    - Thống kê chi tiêu theo [thời gian trong ngày](date) trong [tuần qua](date).
+    - Tôi đã chi bao nhiêu cho [văn phòng phẩm](pro_name) [năm nay](date)?
+    - Báo cáo tổng quát về chi tiêu [hàng ngày](date) trong [tháng 10](date).
+    - Hiển thị tổng chi tiêu cho [quần áo](pro_name) trong [mùa hè](date).
+    - Thống kê các khoản chi theo [phương thức thanh toán](pro_name) trong [tháng qua](date).
+    - Tôi đã chi bao nhiêu cho [quà tặng](pro_name) trong [dịp lễ vừa rồi](date)?
+    - Phân tích xu hướng chi tiêu [hàng tháng](date) trong [năm nay](date).
+    - Tổng chi phí [tiện ích](pro_name) trong [quý vừa qua](date) là bao nhiêu?
+    - Tôi đã chi bao nhiêu cho [phí dịch vụ](pro_name) trong [năm tài chính](date)?
+    - So sánh chi tiêu [làm đẹp](pro_name) giữa [quý này](date) và [quý trước](date).
+    - Hiển thị tổng chi tiêu theo [tuần](date) trong [tháng 11](date).
+    - Tôi đã tiêu bao nhiêu cho [trang trí nhà cửa](pro_name) [năm nay](date)?
+    - Thống kê các khoản chi [trên 1 triệu](price) trong [tháng qua](date).
+    - Tổng thu nhập sau thuế trong [năm tài chính](date) là bao nhiêu?
+    - Phân tích chi tiêu cho [thực phẩm](pro_name) theo [tuần](date) trong [tháng này](date).
+    - Tôi đã chi bao nhiêu cho [thiết bị công nghệ](pro_name) trong [năm qua](date)?
+    - So sánh chi tiêu [cuối tháng](date) với [đầu tháng](date) trong [quý vừa qua](date).
+    - Thống kê các khoản [chi định kỳ](pro_name) trong [6 tháng qua](date).
+    - Hiển thị tổng chi tiêu theo [danh mục](pro_name) trong [tháng 12](date).
+    - Tôi đã chi bao nhiêu cho [học tập](pro_name) trong [năm học vừa qua](date)?
+    - Phân tích tỷ lệ chi tiêu [thiết yếu](pro_name) và [không thiết yếu](pro_name) trong [tháng này](date).
+    - Tổng chi phí [giao thông công cộng](pro_name) trong [quý vừa qua](date) là bao nhiêu?
+    - Thống kê chi tiêu theo [ngày trong tuần](date) trong [tháng trước](date).
+    - Tôi đã tiêu bao nhiêu cho [nội thất](pro_name) trong [năm nay](date)?
+    - Hiển thị thu nhập trung bình hàng tháng trong [năm tài chính](date).
+    - So sánh chi tiêu [đi chợ](pro_name) giữa [tháng này](date) và [tháng trước](date).
+    - Tổng chi phí [liên quan đến sở thích](pro_name) trong [quý 4](date) là bao nhiêu?
+    - Tôi đã chi bao nhiêu cho [đồ dùng văn phòng](pro_name) trong [năm nay](date)?
+    - Thống kê chi tiêu theo [nhóm tuổi](pro_name) trong gia đình trong [quý vừa qua](date).
+    - Phân tích chi tiêu [thuốc men](pro_name) trong [năm nay](date).
+    - Hiển thị biểu đồ chi tiêu theo [tháng](date) trong [năm qua](date).
+    - Tôi đã chi bao nhiêu cho [chăm sóc cá nhân](pro_name) trong [3 tháng qua](date)?
+    - So sánh chi tiêu [ngày lễ](date) với [ngày thường](date) trong [quý vừa qua](date).
+    - Tổng chi phí [bảo trì](pro_name) trong [năm tài chính](date) là bao nhiêu?
+    - Tôi đã tiết kiệm được bao nhiêu phần trăm thu nhập trong [6 tháng qua](date)?
+    - Hiển thị tổng chi tiêu theo [địa điểm mua sắm](location) trong [tháng này](date).
+    - Tôi đã chi bao nhiêu cho [đồ chơi trẻ em](pro_name) trong [năm nay](date)?
+    - Thống kê các khoản [chi thiết yếu](pro_name) trong [tháng qua](date).
+    - Phân tích xu hướng chi tiêu [theo mùa](date) trong [năm vừa qua](date).
+    - Tổng chi phí [ăn uống ngoài](pro_name) trong [quý 1](date) là bao nhiêu?
+    - Tôi đã chi bao nhiêu cho [việc nhà](pro_name) trong [tháng này](date)?
 
-- intent: add_transaction+summarize_transaction
+#- intent: add_transaction+summarize_transaction
+#  examples: |
+#    - Tôi vừa chi [300k](price) mua [cà phê](pro_name), và tôi muốn xem tổng chi tiêu trong tháng.
+#    - Ghi lại giúp tôi [200k](price) tiền [ăn sáng](pro_name), và cho tôi biết tôi đã tiêu bao nhiêu trong tuần.
+#    - Tôi vừa nhận [5 triệu](price) tiền [lương](pro_name), và tôi muốn biết tổng thu nhập tháng này.
+#    - Tôi đã tiêu [2 triệu](price) mua [laptop](pro_name), có thể cho tôi biết tổng số dư còn lại không?
+#    - Ghi nhận [800k](price) mua [quần áo](pro_name), và thống kê giúp tôi chi tiêu tháng này.
+#    - Tôi đã gửi tiết kiệm [3 triệu](price), và tôi muốn xem số dư hiện tại của mình.
+#    - Thêm giao dịch [250k](price) tiền [xăng](pro_name), và cho tôi biết tôi đã tiêu bao nhiêu vào [phương tiện đi lại](pro_name).
+#    - Tôi vừa mua [điện thoại](pro_name) [15 triệu](price), và tôi muốn so sánh chi tiêu tháng này với tháng trước.
+#    - Đã thanh toán [500k](price) hóa đơn [điện](pro_name), tôi còn bao nhiêu trong ngân sách tháng này?
+#    - Ghi nhận [1 triệu](price) tiền [bảo hiểm](pro_name), và cho tôi biết tổng chi tiêu trong tuần.
+#    - Tôi đã trả [700k](price) tiền [thuê nhà](pro_name), thống kê chi tiêu cố định giúp tôi.
+#    - Tôi vừa mua [sách](pro_name) [400k](price), tôi đã tiêu bao nhiêu tiền cho [giáo dục](pro_name) tháng này?
+#    - Ghi lại [300k](price) mua [quà tặng](pro_name), và thống kê chi tiêu trong danh mục [mua sắm](pro_name).
+#    - Tôi đã chuyển khoản [1,2 triệu](price) cho [bạn](pro_name), cho tôi danh sách các giao dịch gần đây.
+#    - Đăng ký [5 triệu](price) thu nhập từ [kinh doanh](pro_name), tổng thu nhập của tôi hiện tại là bao nhiêu?
+#    - Tôi đã thanh toán [900k](price) tiền [internet](pro_name), chi tiêu của tôi cho [hóa đơn dịch vụ](pro_name) là bao nhiêu?
+#    - Tôi vừa chi [350k](price) tiền [gym](pro_name), và tôi muốn xem tôi đã chi bao nhiêu cho [sức khỏe](pro_name).
+#    - Ghi nhận [150k](price) tiền [trà sữa](pro_name), tôi đã tiêu bao nhiêu vào [đồ uống](pro_name) tháng này?
+#    - Tôi vừa nạp [điện thoại](pro_name) [100k](price), tổng chi tiêu cho [viễn thông](pro_name) của tôi là bao nhiêu?
+#    - Đã thanh toán [2 triệu](price) tiền [học phí](pro_name), và tôi muốn biết tổng chi tiêu [giáo dục](pro_name) năm nay.
+#    - Tôi vừa mua [vé xem phim](pro_name) [200k](price), cho tôi biết tôi đã tiêu bao nhiêu vào [giải trí](pro_name).
+#    - Ghi lại [500k](price) tiền [xăng](pro_name), tôi đã tiêu bao nhiêu cho [phương tiện đi lại](pro_name) trong tháng?
+#    - Tôi vừa đặt [phòng khách sạn](pro_name) hết [3 triệu](price), cho tôi xem tổng chi tiêu [du lịch](pro_name).
+#    - Thêm vào danh sách chi tiêu [800k](price) tiền [ăn uống](pro_name), tôi đã chi tổng cộng bao nhiêu cho [thực phẩm](pro_name)?
+#    - Tôi đã gửi [5 triệu](price) vào tiết kiệm, số dư hiện tại của tôi là bao nhiêu?
+#    - Đăng ký một khoản thu nhập [10 triệu](price) từ [lương](pro_name), tổng thu nhập tháng này là bao nhiêu?
+#    - Ghi nhận [2 triệu](price) tiền [thuê nhà](pro_name), tôi còn lại bao nhiêu trong ngân sách tháng này?
+#    - Tôi vừa mua [laptop](pro_name) [20 triệu](price), tổng số tiền tôi đã tiêu cho [thiết bị công nghệ](pro_name) là bao nhiêu?
+#    - Thêm vào danh sách [400k](price) tiền mua [sách](pro_name), chi tiêu của tôi cho [giáo dục](pro_name) là bao nhiêu?
+#    - Tôi vừa nạp [điện thoại](pro_name) [150k](price), tổng chi tiêu của tôi cho [viễn thông](pro_name) là bao nhiêu?
+#    - Tôi vừa trả [1 triệu](price) tiền [bảo hiểm xe](pro_name), thống kê chi tiêu [bảo hiểm](pro_name) của tôi trong năm nay.
+#    - Tôi vừa thanh toán [700k](price) tiền hóa đơn [điện](pro_name), tổng số tiền tôi đã trả cho [hóa đơn dịch vụ](pro_name) là bao nhiêu?
+#    - Ghi lại [250k](price) tiền [cà phê sáng](pro_name), tôi đã chi tiêu bao nhiêu cho [đồ uống](pro_name) tháng này?
+#    - Tôi đã mua [quần áo](pro_name) hết [3 triệu](price), có thể cho tôi biết tổng số tiền tôi đã tiêu cho [mua sắm](pro_name)?
+#    - Tôi vừa chuyển khoản [2 triệu](price) cho [bạn tôi](pro_name), tổng số tiền tôi đã chuyển khoản trong tháng này là bao nhiêu?
+#    - Tôi mới tiêu [900k](price) để mua [giày thể thao](pro_name), tôi đã chi bao nhiêu tiền cho [thời trang](pro_name)?
+#    - Ghi nhận [600k](price) tiền [sửa xe](pro_name), tổng số tiền tôi đã chi cho [bảo trì phương tiện](pro_name) là bao nhiêu?
+#    - Tôi vừa trả [500k](price) tiền [học online](pro_name), cho tôi xem tổng chi tiêu của tôi cho [giáo dục](pro_name).
+#    - Tôi đã nhận được [3 triệu](price) tiền [thưởng](pro_name), tổng thu nhập của tôi năm nay là bao nhiêu?
+#    - Tôi vừa ăn trưa hết [250k](price), có thể cho tôi biết tổng chi tiêu của tôi cho [ăn uống](pro_name) tuần này?
+#    - Ghi lại tôi đã tiêu [1,5 triệu](price) mua [quà tặng](pro_name), thống kê chi tiêu cho [quà tặng](pro_name) giúp tôi.
+#    - Tôi đã chi [2 triệu](price) mua [điện thoại](pro_name), có thể so sánh chi tiêu tháng này với tháng trước?
+#    - Ghi nhận khoản thu nhập [7 triệu](price) từ [freelance](pro_name), tổng thu nhập của tôi tháng này là bao nhiêu?
+#    - Tôi vừa đặt [vé máy bay](pro_name) [4,5 triệu](price), có thể cho tôi biết tổng số tiền tôi đã chi cho [du lịch](pro_name) không?
+#    - Tôi đã thanh toán [1,2 triệu](price) tiền [wifi](pro_name), tổng số tiền tôi đã tiêu cho [internet](pro_name) là bao nhiêu?
+#    - Ghi lại tôi vừa mua [bàn làm việc](pro_name) [2 triệu](price), thống kê chi tiêu của tôi cho [nội thất](pro_name) giúp tôi.
+#    - Tôi đã chuyển khoản [500k](price) tiền [điện thoại](pro_name), tôi đã tiêu bao nhiêu tiền cho [viễn thông](pro_name) trong năm nay?
+#    - Tôi vừa tiêu [300k](price) để đi [spa](pro_name), tổng số tiền tôi đã chi cho [chăm sóc bản thân](pro_name) là bao nhiêu?
+#    - Tôi vừa gửi [5 triệu](price) vào tài khoản tiết kiệm, có thể cho tôi biết tổng số dư hiện tại không?
+#    - Ghi lại [800k](price) tiền [ăn tối](pro_name) tại [nhà hàng](location), tổng chi tiêu cho [ăn uống](pro_name) tháng này là bao nhiêu?
+#    - Tôi vừa mua [vé tàu](pro_name) [1,3 triệu](price), tổng số tiền tôi đã chi cho [phương tiện đi lại](pro_name) là bao nhiêu?
+#    - Thêm [400k](price) tiền [mỹ phẩm](pro_name), tôi đã tiêu bao nhiêu cho [làm đẹp](pro_name)?
+#    - Tôi vừa nhận [6 triệu](price) từ [bán hàng online](pro_name), tổng thu nhập của tôi năm nay là gì?
+#    - Ghi nhận [700k](price) tiền [vé concert](pro_name), tôi đã chi bao nhiêu cho [giải trí](pro_name)?
+#    - Tôi vừa trả [2,5 triệu](price) cho [tour du lịch](pro_name), tổng chi tiêu [du lịch](pro_name) năm nay là bao nhiêu?
+#    - Thêm [350k](price) tiền [ăn trưa](pro_name) [hôm nay](date), tôi đã chi bao nhiêu cho [thực phẩm](pro_name)?
+#    - Tôi đã chi [1 triệu](price) mua [tai nghe](pro_name), tổng số tiền tôi đã tiêu cho [thiết bị công nghệ](pro_name) là bao nhiêu?
+#    - Ghi lại [600k](price) tiền [bảo trì xe máy](pro_name), tôi đã chi bao nhiêu cho [phương tiện](pro_name)?
+#    - Tôi vừa nhận [8 triệu](price) từ [hợp đồng dự án](pro_name), tổng thu nhập tháng này là bao nhiêu?
+#    - Thêm [200k](price) tiền [cà phê](pro_name), tôi đã tiêu bao nhiêu cho [đồ uống](pro_name) tuần này?
+#    - Tôi đã trả [1,5 triệu](price) tiền [nha khoa](pro_name), tổng chi tiêu cho [sức khỏe](pro_name) là bao nhiêu?
+#    - Ghi nhận [900k](price) tiền [vé sự kiện](pro_name), tôi đã chi bao nhiêu cho [giải trí](pro_name) năm nay?
+#    - Tôi vừa mua [máy in](pro_name) [1,3 triệu](price), tổng chi tiêu cho [đồ văn phòng](pro_name) là bao nhiêu?
+#    - Thêm [500k](price) tiền [ăn uống](pro_name) tại [quán quen](location), tổng chi tiêu [thực phẩm](pro_name) là bao nhiêu?
+#    - Tôi vừa nhận [4 triệu](price) từ [tiền lãi đầu tư](pro_name), tổng thu nhập năm nay là bao nhiêu?
+#    - Ghi lại [300k](price) tiền [vé xe buýt](pro_name), tôi đã chi bao nhiêu cho [giao thông](pro_name)?
+#    - Tôi đã chi [2 triệu](price) mua [đồ gia dụng](pro_name), tổng chi tiêu cho [nhà cửa](pro_name) là bao nhiêu?
+#    - Thêm [700k](price) tiền [vé công viên](pro_name), tôi đã tiêu bao nhiêu cho [giải trí](pro_name)?
+#    - Tôi vừa trả [1,8 triệu](price) cho [khóa học tiếng Anh](pro_name), tổng chi tiêu [giáo dục](pro_name) là bao nhiêu?
+#    - Ghi nhận [250k](price) tiền [hoa](pro_name) [hôm nay](date), tôi đã chi bao nhiêu cho [quà tặng](pro_name)?
+#    - Tôi vừa mua [đồng hồ](pro_name) [1,5 triệu](price), tổng số tiền tôi đã tiêu cho [thời trang](pro_name) là bao nhiêu?
+#    - Tôi vừa nhận [5 triệu](price) từ [công việc part-time](pro_name), tổng thu nhập tháng này là bao nhiêu?
+#    - Ghi lại [400k](price) tiền [taxi](pro_name), tổng chi tiêu cho [phương tiện](pro_name) là bao nhiêu?
+#    - Tôi đã chi [1 triệu](price) mua [máy ảnh](pro_name), tổng chi tiêu cho [thiết bị công nghệ](pro_name) là bao nhiêu?
+#    - Thêm [600k](price) tiền [bữa tiệc](pro_name), tôi đã tiêu bao nhiêu cho [ăn uống](pro_name)?
+#    - Tôi vừa trả [2,3 triệu](price) cho [vé concert](pro_name), tổng chi tiêu [giải trí](pro_name) là bao nhiêu?
+#    - Ghi nhận [350k](price) tiền [ăn sáng](pro_name) [hôm qua](date), tổng chi tiêu [thực phẩm](pro_name) là bao nhiêu?
+#    - Tôi vừa nhận [7 triệu](price) từ [bán hàng](pro_name), tổng thu nhập của tôi là bao nhiêu?
+#    - Thêm [800k](price) tiền [đồ gia dụng](pro_name), tổng chi tiêu cho [nhà cửa](pro_name) là bao nhiêu?
+#    - Tôi đã chi [1,2 triệu](price) mua [quà sinh nhật](pro_name), tổng chi tiêu cho [quà tặng](pro_name) là bao nhiêu?
+#    - Ghi lại [500k](price) tiền [vé tàu](pro_name), tôi đã tiêu bao nhiêu cho [phương tiện đi lại](pro_name)?
+#    - Tôi vừa trả [1 triệu](price) tiền [bảo hiểm sức khỏe](pro_name), tổng chi tiêu [sức khỏe](pro_name) là bao nhiêu?
+#    - Thêm [300k](price) tiền [trà sữa](pro_name), tôi đã chi bao nhiêu cho [đồ uống](pro_name) tháng này?
+#    - Tôi vừa nhận [6 triệu](price) từ [tiền thưởng dự án](pro_name), tổng thu nhập năm nay là bao nhiêu?
+#    - Ghi دریافت [450k](price) tiền [ăn trưa](pro_name) tại [Hà Nội](location), tổng chi tiêu [ăn uống](pro_name) là bao nhiêu?
+
+- intent: delete_transaction
   examples: |
-    - Tôi vừa chi 300k mua cà phê, và tôi muốn xem tổng chi tiêu trong tháng.
-    - Ghi lại giúp tôi 200k tiền ăn sáng, và cho tôi biết tôi đã tiêu bao nhiêu trong tuần.
-    - Tôi vừa nhận 5 triệu tiền lương, và tôi muốn biết tổng thu nhập tháng này.
-    - Tôi đã tiêu 2 triệu mua laptop, có thể cho tôi biết tổng số dư còn lại không?
-    - Ghi nhận 800k mua quần áo, và thống kê giúp tôi chi tiêu tháng này.
-    - Tôi đã gửi tiết kiệm 3 triệu, và tôi muốn xem số dư hiện tại của mình.
-    - Thêm giao dịch 250k tiền xăng, và cho tôi biết tôi đã tiêu bao nhiêu vào phương tiện đi lại.
-    - Tôi vừa mua điện thoại 15 triệu, và tôi muốn so sánh chi tiêu tháng này với tháng trước.
-    - Đã thanh toán 500k hóa đơn điện, tôi còn bao nhiêu trong ngân sách tháng này?
-    - Ghi nhận 1 triệu tiền bảo hiểm, và cho tôi biết tổng chi tiêu trong tuần.
-    - Tôi đã trả 700k tiền thuê nhà, thống kê chi tiêu cố định giúp tôi.
-    - Tôi vừa mua sách 400k, tôi đã tiêu bao nhiêu tiền cho giáo dục tháng này?
-    - Ghi lại 300k mua quà tặng, và thống kê chi tiêu trong danh mục mua sắm.
-    - Tôi đã chuyển khoản 1,2 triệu cho bạn, cho tôi danh sách các giao dịch gần đây.
-    - Đăng ký 5 triệu thu nhập từ kinh doanh, tổng thu nhập của tôi hiện tại là bao nhiêu?
-    - Tôi đã thanh toán 900k tiền internet, chi tiêu của tôi cho hóa đơn dịch vụ là bao nhiêu?
-    - Tôi vừa chi 350k tiền gym, và tôi muốn xem tôi đã chi bao nhiêu cho sức khỏe.
-    - Ghi nhận 150k tiền trà sữa, tôi đã tiêu bao nhiêu vào đồ uống tháng này?
-    - Tôi vừa nạp điện thoại 100k, tổng chi tiêu cho viễn thông của tôi là bao nhiêu?
-    - Đã thanh toán 2 triệu tiền học phí, và tôi muốn biết tổng chi tiêu giáo dục năm nay.
+    - Xóa khoản chi [200k](price) tiền [ăn uống](pro_name) [hôm nay](date).
+    - Hủy giao dịch [500k](price) mua [quần áo](pro_name) vừa ghi.
+    - Xóa khoản thu nhập [5 triệu](price) từ [lương](pro_name).
+    - Tôi muốn xóa khoản chi [300k](price) đi [siêu thị](pro_name).
+    - Hủy bỏ giao dịch [150k](price) tiền [cà phê](pro_name) [hôm qua](date).
+    - Xóa khoản [200k](price) cho [sửa xe](pro_name) khỏi danh sách.
+    - Tôi không muốn lưu khoản [1 triệu](price) [vé máy bay](pro_name) nữa, xóa đi.
+    - Hủy giao dịch [10 triệu](price) từ [lương tháng này](pro_name).
+    - Xóa khoản nhận [2 triệu](price) tiền [thưởng](pro_name).
+    - Hủy bỏ [400k](price) tiền [bữa tối](pro_name) tôi vừa thêm.
+    - Xóa giao dịch [500k](price) chuyển khoản cho [bạn](pro_name).
+    - Tôi muốn hủy [250k](price) tiền [xăng](pro_name) [tuần này](date).
+    - Xóa hóa đơn [điện nước](pro_name) [1,2 triệu](price).
+    - Hủy khoản chi [1 triệu](price) mua [điện thoại](pro_name).
+    - Xóa [300k](price) tiền [sách](pro_name) [hôm nay](date) khỏi danh sách.
+    - Tôi không cần lưu [450k](price) [vé xem phim](pro_name), xóa nó.
+    - Hủy giao dịch [2 triệu](price) [học phí](pro_name) [tháng này](date).
+    - Xóa khoản thu [5 triệu](price) từ [freelance](pro_name).
+    - Hủy [600k](price) mua [đồ trang trí](pro_name).
+    - Xóa [350k](price) tiền [bảo trì xe](pro_name) tôi vừa ghi.
+    - Tôi muốn hủy khoản [250k](price) mua [sách](pro_name).
+    - Xóa [1 triệu](price) tiền [thuê nhà](pro_name) [tháng này](date).
+    - Hủy giao dịch [500k](price) tiền [điện](pro_name).
+    - Xóa khoản chi [700k](price) mua [giày](pro_name).
+    - Hủy [350k](price) tiền [bữa tối](pro_name) tại [nhà hàng](location).
+    - Xóa [100k](price) nạp [điện thoại](pro_name) [hôm nay](date).
+    - Hủy khoản [1,5 triệu](price) [sửa xe](pro_name) vừa thêm.
+    - Xóa giao dịch [400k](price) mua [mỹ phẩm](pro_name).
+    - Tôi muốn hủy [200k](price) [vé xem phim](pro_name).
+    - Xóa [3 triệu](price) tiền [khách sạn](pro_name) khỏi danh sách.
+    - Hủy [850k](price) mua [quà sinh nhật](pro_name).
+    - Xóa khoản [1 triệu](price) [học phí](pro_name) tôi vừa ghi.
+    - Hủy giao dịch [8 triệu](price) từ [đầu tư](pro_name).
+    - Xóa [500k](price) tiền [xăng](pro_name) [tuần này](date).
+    - Hủy [4 triệu](price) [vé máy bay](pro_name) vừa thêm.
+    - Xóa khoản chuyển khoản [3 triệu](price) cho [mẹ](pro_name).
+    - Hủy [25 triệu](price) mua [laptop](pro_name).
+    - Xóa hóa đơn [nước](pro_name) [700k](price).
+    - Hủy khoản thu [12 triệu](price) từ [lương](pro_name).
+    - Xóa [2 triệu](price) tiền [thuê nhà](pro_name).
+    - Hủy giao dịch [1,2 triệu](price) [bảo hiểm xe](pro_name).
+    - Xóa [300k](price) tiền [đồ ăn vặt](pro_name).
+    - Hủy [1 triệu](price) mua [bàn phím](pro_name).
+    - Xóa [2,5 triệu](price) [khóa học online](pro_name).
+    - Hủy khoản thu [15 triệu](price) [thưởng cuối năm](pro_name).
+    - Xóa [450k](price) mua [đồng hồ](pro_name).
+    - Hủy [600k](price) tiền [ăn tối](pro_name) [hôm nay](date).
+    - Xóa [200k](price) chuyển khoản [điện thoại](pro_name).
+    - Hủy [1 triệu](price) [vé tàu](pro_name).
+    - Xóa [2 triệu](price) mua [tai nghe](pro_name).
+    - Hủy [1,8 triệu](price) [du lịch Đà Lạt](pro_name) [tháng này](date).
+    - Xóa khoản chi [900k](price) [bảo hiểm sức khỏe](pro_name).
+    - Hủy [350k](price) tiền [ăn trưa](pro_name) [hôm qua](date).
+    - Xóa [2,3 triệu](price) [vé concert](pro_name).
+    - Hủy khoản thu [7 triệu](price) từ [bán hàng online](pro_name).
+    - Xóa [1,7 triệu](price) mua [máy ảnh](pro_name).
+    - Hủy [400k](price) tiền [taxi](pro_name) [tuần trước](date).
+    - Xóa [800k](price) mua [đồ gia dụng](pro_name).
+    - Hủy [600k](price) [bữa tiệc sinh nhật](pro_name).
+    - Xóa [1,5 triệu](price) tiền [nha khoa](pro_name).
+    - Hủy khoản thu [3,5 triệu](price) từ [part-time](pro_name).
+    - Xóa [250k](price) mua [hoa](pro_name) [hôm nay](date).
+    - Hủy [700k](price) [vé sự kiện](pro_name).
+    - Xóa [2 triệu](price) [khóa học tiếng Anh](pro_name).
+    - Hủy [1,3 triệu](price) mua [máy in](pro_name).
+    - Xóa khoản thu [4 triệu](price) từ [freelance](pro_name).
+    - Hủy [500k](price) [ăn uống](pro_name) tại [quán quen](location).
+    - Xóa [800k](price) [bảo dưỡng ô tô](pro_name).
+    - Hủy [300k](price) tiền [trà sữa](pro_name) [hôm nay](date).
+    - Xóa [150k](price) [vé xe buýt](pro_name).
+    - Hủy khoản thu [2,8 triệu](price) [tiền thưởng dự án](pro_name).
+    - Xóa [1 triệu](price) [đồ chơi trẻ em](pro_name).
+    - Hủy [450k](price) [ăn tối](pro_name) tại [Hà Nội](location).
+    - Xóa [3 triệu](price) tiền [thuê văn phòng](pro_name).
+    - Hủy [200k](price) [đồ ăn sáng](pro_name) [hôm qua](date).
+    - Xóa [1,2 triệu](price) [thiết bị âm thanh](pro_name).
+    - Hủy [600k](price) [vé hội chợ](pro_name).
+    - Xóa khoản thu [6 triệu](price) từ [thiết kế](pro_name).
+    - Hủy [350k](price) [đồ uống](pro_name) [tuần này](date).
+    - Xóa [2,5 triệu](price) [tour du lịch](pro_name).
+    - Hủy [1 triệu](price) [đồ điện tử](pro_name).
+    - Xóa [3,2 triệu](price) mua [ghế sofa](pro_name).
+    - Hủy [500k](price) [bữa trưa](pro_name) tại [Sài Gòn](location).
+    - Xóa [700k](price) [máy xay sinh tố](pro_name).
+    - Hủy [1,5 triệu](price) [vé tàu cao tốc](pro_name).
+    - Xóa khoản thu [8 triệu](price) từ [lương OT](pro_name).
+    - Hủy [400k](price) [ăn vặt](pro_name) [hôm nay](date).
+    - Xóa [2 triệu](price) [máy giặt](pro_name).
+    - Hủy [300k](price) [vé công viên](pro_name).
+    - Xóa [1,8 triệu](price) [đồng hồ đeo tay](pro_name).
+    - Hủy [600k](price) [ăn uống](pro_name) tại [quán hải sản](location).
+    - Xóa [1 triệu](price) [khóa học nấu ăn](pro_name).
+    - Hủy [2,7 triệu](price) [vé máy bay nội địa](pro_name).
+    - Xóa khoản thu [5 triệu](price) từ [tiền lãi đầu tư](pro_name).
+    - Hủy [450k](price) [bữa tối](pro_name) [thứ Sáu](date).
+    - Xóa khoản chi [220k](price) [cà phê](pro_name) [sáng nay](date).
+    - Hủy giao dịch mua [quần áo](pro_name) [540k](price) ngày [hôm qua](date).
+    - Tôi muốn xóa khoản chi [950k](price) tiền [khám bệnh](pro_name).
+    - Xóa bỏ giao dịch [175k](price) mua [sách](pro_name) vừa rồi.
+    - Hãy xóa khoản thu [7 triệu](price) từ [thưởng](pro_name) [tháng trước](date).
+    - Xóa khoản [320k](price) tiền [xăng xe](pro_name) [tuần này](date).
+    - Hủy giao dịch chuyển [2,5 triệu](price) cho [em gái](pro_name).
+    - Tôi muốn xóa giao dịch [1,8 triệu](price) mua [điện thoại](pro_name).
+    - Xóa khoản chi [430k](price) [ăn nhà hàng](pro_name) [tối qua](date).
+    - Hủy giao dịch [280k](price) [phụ kiện máy tính](pro_name).
+    - Làm ơn xóa khoản [650k](price) [sửa xe](pro_name) [tuần trước](date).
+    - Tôi muốn hủy giao dịch [15 triệu](price) [đặt cọc nhà](pro_name).
+    - Xóa khoản thu [3,7 triệu](price) từ [bán đồ cũ](pro_name).
+    - Hủy giao dịch [790k](price) [mua giày](pro_name) [tháng này](date).
+    - Xóa khoản chi [365k](price) [mua sắm online](pro_name).
+    - Tôi cần xóa khoản [520k](price) chi cho [quà tặng](pro_name).
+    - Hủy giao dịch [180k](price) [ăn trưa công ty](pro_name) [hôm qua](date).
+    - Xóa khoản chi [4,5 triệu](price) [sửa nhà](pro_name) vừa nhập.
+    - Hủy khoản [270k](price) [gửi xe](pro_name) [tháng này](date).
+    - Tôi muốn xóa giao dịch [890k](price) mua [tai nghe](pro_name).
+    - Hãy xóa khoản chi [1,25 triệu](price) [đặt vé máy bay](pro_name) [tháng sau](date).
+    - Xóa giao dịch [420k](price) [tiệc sinh nhật](pro_name) vừa thêm.
+    - Hủy khoản [135k](price) [trà sữa](pro_name) [chiều qua](date).
+    - Tôi muốn xóa khoản chi [680k](price) [đồ dùng học tập](pro_name).
+    - Xóa bỏ giao dịch [2,7 triệu](price) [mua laptop](pro_name).
+    - Hủy khoản [370k](price) [thuốc men](pro_name) [tuần này](date).
+    - Xóa khoản chi [1,5 triệu](price) [sửa điều hòa](pro_name).
+    - Tôi cần hủy giao dịch [230k](price) [ăn tối](pro_name) [hôm nay](date).
+    - Xóa khoản thu [9 triệu](price) từ [tiền lương](pro_name) vừa nhập.
+    - Hãy xóa giao dịch [550k](price) [mua quần áo](pro_name) tôi vừa thêm.
+    - Tôi muốn xóa khoản [870k](price) [vé xem phim](pro_name) cuối tuần.
+    - Xóa bỏ khoản chi [320k](price) [đồ chơi trẻ em](pro_name).
+    - Hủy giao dịch [1,7 triệu](price) [sửa ống nước](pro_name) [tháng trước](date).
+    - Tôi cần xóa khoản [485k](price) [mỹ phẩm](pro_name).
+    - Xóa khoản chi [290k](price) [phụ kiện điện thoại](pro_name) vừa nhập.
+    - Hủy giao dịch [660k](price) [bảo hiểm y tế](pro_name) [năm nay](date).
+    - Xóa khoản [180k](price) [giao hàng nhanh](pro_name) tôi mới thêm.
+    - Tôi muốn hủy khoản chi [760k](price) [đồng hồ](pro_name).
+    - Xóa giao dịch [340k](price) [ăn hàng](pro_name) [cuối tuần](date).
+    - Hủy khoản chi [5,2 triệu](price) [sửa xe ô tô](pro_name).
+    - Tôi cần xóa giao dịch [240k](price) [sách tham khảo](pro_name).
+    - Xóa bỏ khoản [1,3 triệu](price) [máy hút bụi](pro_name) vừa thêm.
+    - Hủy giao dịch [195k](price) [hoa tươi](pro_name) [hôm qua](date).
+    - Tôi muốn xóa khoản chi [780k](price) [phần mềm](pro_name).
+    - Xóa khoản [3,5 triệu](price) [đặt tour du lịch](pro_name) [tháng sau](date).
+    - Hủy giao dịch [490k](price) [thay màn hình điện thoại](pro_name).
+    - Tôi cần xóa khoản [270k](price) [vé concert](pro_name) vừa nhập.
+    - Xóa bỏ giao dịch [620k](price) [mua quà](pro_name) [sinh nhật bạn](date).
+    - Hủy khoản chi [380k](price) [sách nấu ăn](pro_name).
+    - Tôi muốn xóa giao dịch [1,9 triệu](price) [mua tủ lạnh](pro_name).
+    - Xóa khoản [140k](price) [trò chơi trực tuyến](pro_name) [tuần này](date).
+    - Hủy giao dịch [850k](price) [đồ trang trí nhà](pro_name).
+    - Tôi cần xóa khoản chi [450k](price) [thuê xe](pro_name) [tháng trước](date).
+    - Xóa bỏ khoản [720k](price) [đồ thể thao](pro_name) vừa thêm.
+    - Hủy giao dịch [260k](price) [thú cưng](pro_name).
+    - Tôi muốn xóa khoản [530k](price) [khám nha khoa](pro_name) [tuần trước](date).
+    - Xóa khoản chi [1,6 triệu](price) [máy ảnh cũ](pro_name).
+    - Hủy giao dịch [390k](price) [mua áo khoác](pro_name).
+    - Tôi cần xóa khoản [170k](price) [sách tiếng Anh](pro_name) vừa nhập.
+    - Xóa bỏ giao dịch [1,45 triệu](price) [đàn guitar](pro_name).
+    - Hủy khoản chi [280k](price) [phim ảnh](pro_name) [cuối tuần](date).
+    - Tôi muốn xóa khoản [920k](price) [dụng cụ nhà bếp](pro_name).
+    - Xóa giao dịch [2,3 triệu](price) [máy tính bảng](pro_name) [tháng này](date).
+    - Hủy khoản [310k](price) [đồ trang điểm](pro_name).
+    - Tôi cần xóa khoản chi [580k](price) [giày thể thao](pro_name).
+    - Xóa bỏ giao dịch [430k](price) [khám sức khỏe](pro_name) [quý này](date).
+    - Hủy khoản [160k](price) [đồ ăn vặt](pro_name) [hôm nay](date).
+    - Tôi muốn xóa giao dịch [1,2 triệu](price) [vé tàu](pro_name) về quê.
+    - Xóa khoản chi [750k](price) [phụ kiện máy tính](pro_name).
+    - Hủy giao dịch [210k](price) [phí gửi hàng](pro_name) [tuần này](date).
+    - Tôi cần xóa khoản [970k](price) [đồng hồ thông minh](pro_name).
+    - Xóa bỏ khoản chi [330k](price) [thẻ điện thoại](pro_name).
+    - Hủy giao dịch [2,1 triệu](price) [sửa nhà vệ sinh](pro_name) [tháng trước](date).
+    - Tôi muốn xóa khoản [410k](price) [đồ dùng văn phòng](pro_name).
+    - Xóa khoản chi [690k](price) [quà Tết](pro_name) vừa thêm.
+    - Hủy giao dịch [250k](price) [bảo dưỡng xe](pro_name) [tuần này](date).
+    - Tôi cần xóa khoản [1,8 triệu](price) [tủ quần áo](pro_name).
+    - Xóa bỏ giao dịch [560k](price) [giày dép](pro_name).
+    - Hủy khoản chi [190k](price) [phim chiếu rạp](pro_name) [hôm qua](date).
+    - Tôi muốn xóa khoản [830k](price) [trang phục dự tiệc](pro_name).
+    - Xóa giao dịch [2,4 triệu](price) [khóa học online](pro_name) [năm nay](date).
+    - Hủy khoản [360k](price) [vitamin](pro_name) vừa thêm.
+    - Tôi cần xóa khoản chi [1,1 triệu](price) [bàn làm việc](pro_name).
+    - Xóa bỏ giao dịch [270k](price) [nạp tiền điện thoại](pro_name) [tháng này](date).
+    - Hủy khoản [640k](price) [đồ thể thao](pro_name).
+    - Tôi muốn xóa giao dịch [470k](price) [mua váy](pro_name) [mùa hè](date).
+    - Xóa khoản chi [1,35 triệu](price) [quạt điều hòa](pro_name).
+    - Hủy giao dịch [220k](price) [đồ dùng học tập](pro_name) [tuần này](date).
+    - Tôi cần xóa khoản [880k](price) [vé du lịch](pro_name).
+    - Xóa bỏ khoản chi [300k](price) [tiệc công ty](pro_name) [cuối tháng](date).
+    - Hủy giao dịch [3,2 triệu](price) [iPhone cũ](pro_name).
+    - Tôi muốn xóa khoản [240k](price) [sách giáo khoa](pro_name).
+    - Xóa khoản chi [730k](price) [kính mắt](pro_name) vừa thêm.
+    - Hủy giao dịch [520k](price) [đồ thể thao](pro_name) [năm nay](date).
+    - Tôi cần xóa khoản [950k](price) [thiết bị y tế](pro_name).
+    - Xóa bỏ giao dịch [350k](price) [phí ngân hàng](pro_name) [tháng này](date).
+    - Hủy khoản chi [670k](price) [loa bluetooth](pro_name).
+    - Tôi muốn xóa khoản [1,9 triệu](price) [khóa học piano](pro_name) cho con.
+    - Xóa giao dịch [480k](price) [đồ trang sức](pro_name) [tuần trước](date).
+    - Hủy khoản [740k](price) [dụng cụ thể thao](pro_name) vừa thêm.
+    - Tôi cần xóa khoản chi [230k](price) [phụ kiện thời trang](pro_name).
 
+- intent: edit_transaction
+  examples: |
+    - Sửa khoản chi [200k](price) [ăn uống](pro_name) [hôm nay](date) thành [250k](price).
+    - Chỉnh giao dịch [500k](price) mua [quần áo](pro_name) thành [600k](price).
+    - Sửa khoản thu [5 triệu](price) từ [lương](pro_name) thành [5,5 triệu](price).
+    - Tôi muốn chỉnh [300k](price) đi [siêu thị](pro_name) thành [350k](price).
+    - Sửa [150k](price) tiền [cà phê](pro_name) [hôm qua](date) thành [200k](price).
+    - Chỉnh khoản [200k](price) [sửa xe](pro_name) thành [300k](price).
+    - Sửa [1 triệu](price) [vé máy bay](pro_name) thành [1,2 triệu](price).
+    - Chỉnh khoản thu [10 triệu](price) [lương](pro_name) thành [11 triệu](price).
+    - Sửa [2 triệu](price) tiền [thưởng](pro_name) thành [2,5 triệu](price).
+    - Chỉnh [400k](price) [bữa tối](pro_name) thành [450k](price).
+    - Sửa giao dịch [500k](price) chuyển cho [bạn](pro_name) thành [550k](price).
+    - Tôi muốn chỉnh [250k](price) [xăng](pro_name) [tuần này](date) thành [300k](price).
+    - Sửa hóa đơn [điện nước](pro_name) từ [1,2 triệu](price) thành [1,3 triệu](price).
+    - Chỉnh [1 triệu](price) [điện thoại](pro_name) thành [1,5 triệu](price).
+    - Sửa [300k](price) [sách](pro_name) [hôm nay](date) thành [350k](price).
+    - Chỉnh [450k](price) [vé xem phim](pro_name) thành [500k](price).
+    - Sửa [2 triệu](price) [học phí](pro_name) [tháng này](date) thành [2,2 triệu](price).
+    - Chỉnh khoản thu [5 triệu](price) [freelance](pro_name) thành [6 triệu](price).
+    - Sửa [600k](price) [đồ trang trí](pro_name) thành [700k](price).
+    - Chỉnh [350k](price) [bảo trì xe](pro_name) thành [400k](price).
+    - Sửa [250k](price) mua [sách](pro_name) thành [300k](price).
+    - Chỉnh [1 triệu](price) [thuê nhà](pro_name) [tháng này](date) thành [1,1 triệu](price).
+    - Sửa [500k](price) tiền [điện](pro_name) thành [550k](price).
+    - Chỉnh [700k](price) mua [giày](pro_name) thành [800k](price).
+    - Sửa [350k](price) [bữa tối](pro_name) tại [nhà hàng](location) thành [400k](price).
+    - Chỉnh [100k](price) nạp [điện thoại](pro_name) thành [150k](price).
+    - Sửa [1,5 triệu](price) [sửa xe](pro_name) thành [1,7 triệu](price).
+    - Chỉnh [400k](price) [mỹ phẩm](pro_name) thành [450k](price).
+    - Sửa [200k](price) [vé xem phim](pro_name) thành [250k](price).
+    - Chỉnh [3 triệu](price) [khách sạn](pro_name) thành [3,5 triệu](price).
+    - Sửa [850k](price) [quà sinh nhật](pro_name) thành [900k](price).
+    - Chỉnh [1 triệu](price) [học phí](pro_name) thành [1,2 triệu](price).
+    - Sửa khoản thu [8 triệu](price) [đầu tư](pro_name) thành [9 triệu](price).
+    - Chỉnh [500k](price) [xăng](pro_name) [tuần này](date) thành [600k](price).
+    - Sửa [4 triệu](price) [vé máy bay](pro_name) thành [4,2 triệu](price).
+    - Chỉnh [3 triệu](price) chuyển cho [mẹ](pro_name) thành [3,3 triệu](price).
+    - Sửa [25 triệu](price) [laptop](pro_name) thành [26 triệu](price).
+    - Chỉnh [700k](price) hóa đơn [nước](pro_name) thành [750k](price).
+    - Sửa khoản thu [12 triệu](price) [lương](pro_name) thành [13 triệu](price).
+    - Chỉnh [2 triệu](price) [thuê nhà](pro_name) thành [2,1 triệu](price).
+    - Sửa [1,2 triệu](price) [bảo hiểm xe](pro_name) thành [1,3 triệu](price).
+    - Chỉnh [300k](price) [đồ ăn vặt](pro_name) thành [350k](price).
+    - Sửa [1 triệu](price) [bàn phím](pro_name) thành [1,1 triệu](price).
+    - Chỉnh [2,5 triệu](price) [khóa học online](pro_name) thành [2,7 triệu](price).
+    - Sửa khoản thu [15 triệu](price) [thưởng cuối năm](pro_name) thành [16 triệu](price).
+    - Chỉnh [450k](price) [đồng hồ](pro_name) thành [500k](price).
+    - Sửa [600k](price) [ăn tối](pro_name) [hôm nay](date) thành [650k](price).
+    - Chỉnh [200k](price) [điện thoại](pro_name) thành [250k](price).
+    - Sửa [1 triệu](price) [vé tàu](pro_name) thành [1,2 triệu](price).
+    - Chỉnh [2 triệu](price) [tai nghe](pro_name) thành [2,3 triệu](price).
+    - Sửa [1,8 triệu](price) [du lịch Đà Lạt](pro_name) thành [2 triệu](price).
+    - Chỉnh [900k](price) [bảo hiểm sức khỏe](pro_name) thành [950k](price).
+    - Sửa [350k](price) [ăn trưa](pro_name) [hôm qua](date) thành [400k](price).
+    - Chỉnh [2,3 triệu](price) [vé concert](pro_name) thành [2,5 triệu](price).
+    - Sửa khoản thu [7 triệu](price) [bán hàng online](pro_name) thành [8 triệu](price).
+    - Chỉnh [1,7 triệu](price) [máy ảnh](pro_name) thành [1,8 triệu](price).
+    - Sửa [400k](price) [taxi](pro_name) [tuần trước](date) thành [450k](price).
+    - Chỉnh [800k](price) [đồ gia dụng](pro_name) thành [850k](price).
+    - Sửa [600k](price) [bữa tiệc sinh nhật](pro_name) thành [700k](price).
+    - Chỉnh [1,5 triệu](price) [nha khoa](pro_name) thành [1,6 triệu](price).
+    - Sửa khoản thu [3,5 triệu](price) [part-time](pro_name) thành [4 triệu](price).
+    - Chỉnh [250k](price) [hoa](pro_name) [hôm nay](date) thành [300k](price).
+    - Sửa [700k](price) [vé sự kiện](pro_name) thành [750k](price).
+    - Chỉnh [2 triệu](price) [khóa học tiếng Anh](pro_name) thành [2,2 triệu](price).
+    - Sửa [1,3 triệu](price) [máy in](pro_name) thành [1,4 triệu](price).
+    - Chỉnh khoản thu [4 triệu](price) [freelance](pro_name) thành [4,5 triệu](price).
+    - Sửa [500k](price) [ăn uống](pro_name) tại [quán quen](location) thành [550k](price).
+    - Chỉnh [800k](price) [bảo dưỡng ô tô](pro_name) thành [900k](price).
+    - Sửa [300k](price) [trà sữa](pro_name) [hôm nay](date) thành [350k](price).
+    - Chỉnh [150k](price) [vé xe buýt](pro_name) thành [200k](price).
+    - Sửa khoản thu [2,8 triệu](price) [tiền thưởng dự án](pro_name) thành [3 triệu](price).
+    - Chỉnh [1 triệu](price) [đồ chơi trẻ em](pro_name) thành [1,1 triệu](price).
+    - Sửa [450k](price) [ăn tối](pro_name) tại [Hà Nội](location) thành [500k](price).
+    - Chỉnh [3 triệu](price) [thuê văn phòng](pro_name) thành [3,2 triệu](price).
+    - Sửa [200k](price) [đồ ăn sáng](pro_name) [hôm qua](date) thành [250k](price).
+    - Chỉnh [1,2 triệu](price) [thiết bị âm thanh](pro_name) thành [1,3 triệu](price).
+    - Sửa [600k](price) [vé hội chợ](pro_name) thành [650k](price).
+    - Chỉnh khoản thu [6 triệu](price) [thiết kế](pro_name) thành [6,5 triệu](price).
+    - Sửa [350k](price) [đồ uống](pro_name) [tuần này](date) thành [400k](price).
+    - Chỉnh [2,5 triệu](price) [tour du lịch](pro_name) thành [2,7 triệu](price).
+    - Sửa [1 triệu](price) [đồ điện tử](pro_name) thành [1,2 triệu](price).
+    - Chỉnh [3,2 triệu](price) [ghế sofa](pro_name) thành [3,5 triệu](price).
+    - Sửa [500k](price) [bữa trưa](pro_name) tại [Sài Gòn](location) thành [550k](price).
+    - Chỉnh [700k](price) [máy xay sinh tố](pro_name) thành [750k](price).
+    - Sửa [1,5 triệu](price) [vé tàu cao tốc](pro_name) thành [1,6 triệu](price).
+    - Chỉnh khoản thu [8 triệu](price) [lương OT](pro_name) thành [9 triệu](price).
+    - Sửa [400k](price) [ăn vặt](pro_name) [hôm nay](date) thành [450k](price).
+    - Chỉnh [2 triệu](price) [máy giặt](pro_name) thành [2,2 triệu](price).
+    - Sửa [300k](price) [vé công viên](pro_name) thành [350k](price).
+    - Chỉnh [1,8 triệu](price) [đồng hồ đeo tay](pro_name) thành [2 triệu](price).
+    - Sửa [600k](price) [ăn uống](pro_name) tại [quán hải sản](location) thành [650k](price).
+    - Chỉnh [1 triệu](price) [khóa học nấu ăn](pro_name) thành [1,2 triệu](price).
+    - Sửa [2,7 triệu](price) [vé máy bay nội địa](pro_name) thành [3 triệu](price).
+    - Chỉnh khoản thu [5 triệu](price) [tiền lãi đầu tư](pro_name) thành [5,5 triệu](price).
+    - Sửa [450k](price) [bữa tối](pro_name) [thứ Sáu](date) thành [500k](price).
+    - Sửa khoản chi [350k](price) [ăn trưa](pro_name) [hôm nay](date) thành [400k](price).
+    - Chỉnh giao dịch [750k](price) [mua quần áo](pro_name) thành [800k](price).
+    - Tôi muốn sửa khoản [2,5 triệu](price) [thuê nhà](pro_name) [tháng này](date) thành [2,7 triệu](price).
+    - Thay đổi giá trị khoản [180k](price) [cà phê sáng](pro_name) thành [200k](price).
+    - Sửa giao dịch [3,8 triệu](price) [mua laptop](pro_name) thành [4 triệu](price).
+    - Chỉnh khoản thu [15 triệu](price) [lương](pro_name) thành [15,5 triệu](price).
+    - Tôi cần sửa khoản [420k](price) [xăng xe](pro_name) [tuần này](date) thành [450k](price).
+    - Thay đổi giao dịch [950k](price) [khám bệnh](pro_name) thành [1,05 triệu](price).
+    - Sửa khoản chi [275k](price) [sách](pro_name) thành [320k](price).
+    - Chỉnh giao dịch [1,6 triệu](price) [điện thoại](pro_name) thành [1,8 triệu](price).
+    - Tôi muốn sửa khoản thu [8 triệu](price) [thưởng](pro_name) thành [8,5 triệu](price).
+    - Thay đổi khoản [560k](price) [ăn tối](pro_name) [cuối tuần](date) thành [620k](price).
+    - Sửa giao dịch [2,2 triệu](price) [sửa xe](pro_name) thành [2,35 triệu](price).
+    - Chỉnh khoản chi [480k](price) [phụ kiện máy tính](pro_name) thành [510k](price).
+    - Tôi cần sửa khoản [1,75 triệu](price) [vé máy bay](pro_name) thành [1,9 triệu](price).
+    - Thay đổi giao dịch [320k](price) [ăn trưa công ty](pro_name) [hôm qua](date) thành [350k](price).
+    - Sửa khoản chi [4,5 triệu](price) [đặt cọc](pro_name) thành [5 triệu](price).
+    - Chỉnh giao dịch [240k](price) [thuốc men](pro_name) thành [280k](price).
+    - Tôi muốn sửa khoản [680k](price) [vé xem phim](pro_name) thành [720k](price).
+    - Thay đổi khoản [1,3 triệu](price) [bảo hiểm xe](pro_name) [năm nay](date) thành [1,45 triệu](price).
+    - Sửa giao dịch [430k](price) [quà tặng](pro_name) thành [470k](price).
+    - Chỉnh khoản chi [790k](price) [mua giày](pro_name) thành [850k](price).
+    - Tôi cần sửa khoản thu [6 triệu](price) [bán đồ cũ](pro_name) thành [6,2 triệu](price).
+    - Thay đổi giao dịch [380k](price) [sách tham khảo](pro_name) thành [420k](price).
+    - Sửa khoản chi [1,9 triệu](price) [máy giặt](pro_name) thành [2 triệu](price).
+    - Chỉnh giao dịch [260k](price) [trà sữa](pro_name) [tuần này](date) thành [290k](price).
+    - Tôi muốn sửa khoản [540k](price) [đồ thể thao](pro_name) thành [590k](price).
+    - Thay đổi khoản [2,8 triệu](price) [sửa nhà](pro_name) thành [3 triệu](price).
+    - Sửa giao dịch [370k](price) [mỹ phẩm](pro_name) thành [410k](price).
+    - Chỉnh khoản chi [650k](price) [đồng hồ](pro_name) thành [700k](price).
+    - Tôi cần sửa khoản [1,55 triệu](price) [khóa học online](pro_name) thành [1,7 triệu](price).
+    - Thay đổi giao dịch [290k](price) [thay pin điện thoại](pro_name) thành [320k](price).
+    - Sửa khoản thu [12 triệu](price) [lương](pro_name) [tháng này](date) thành [12,5 triệu](price).
+    - Chỉnh giao dịch [520k](price) [phụ tùng xe](pro_name) thành [550k](price).
+    - Tôi muốn sửa khoản [1,25 triệu](price) [sửa máy tính](pro_name) thành [1,35 triệu](price).
+    - Thay đổi khoản [780k](price) [giày thể thao](pro_name) thành [820k](price).
+    - Sửa giao dịch [340k](price) [đồ dùng học tập](pro_name) thành [370k](price).
+    - Chỉnh khoản chi [3,6 triệu](price) [tủ lạnh](pro_name) thành [3,8 triệu](price).
+    - Tôi cần sửa khoản [210k](price) [ăn sáng](pro_name) [cuối tuần](date) thành [240k](price).
+    - Thay đổi giao dịch [920k](price) [vé tàu](pro_name) thành [980k](price).
+    - Sửa khoản chi [670k](price) [quà sinh nhật](pro_name) thành [720k](price).
+    - Chỉnh giao dịch [1,8 triệu](price) [máy ảnh](pro_name) thành [2 triệu](price).
+    - Tôi muốn sửa khoản thu [5 triệu](price) [freelance](pro_name) thành [5,5 triệu](price).
+    - Thay đổi khoản [390k](price) [phí gửi xe](pro_name) [tháng này](date) thành [420k](price).
+    - Sửa giao dịch [2,4 triệu](price) [đàn piano](pro_name) thành [2,6 triệu](price).
+    - Chỉnh khoản chi [450k](price) [sách nấu ăn](pro_name) thành [480k](price).
+    - Tôi cần sửa khoản [1,45 triệu](price) [đồ nội thất](pro_name) thành [1,6 triệu](price).
+    - Thay đổi giao dịch [310k](price) [hoa tươi](pro_name) [hôm qua](date) thành [350k](price).
+    - Sửa khoản chi [730k](price) [kính mắt](pro_name) thành [780k](price).
+    - Chỉnh giao dịch [2,7 triệu](price) [điều hòa](pro_name) thành [2,9 triệu](price).
+    - Tôi muốn sửa khoản [590k](price) [dụng cụ nhà bếp](pro_name) thành [640k](price).
+    - Thay đổi khoản thu [9 triệu](price) [tiền lương](pro_name) [tháng trước](date) thành [9,5 triệu](price).
+    - Sửa giao dịch [270k](price) [đồ uống](pro_name) [cuối tuần](date) thành [300k](price).
+    - Chỉnh khoản chi [1,1 triệu](price) [bàn làm việc](pro_name) thành [1,2 triệu](price).
+    - Tôi cần sửa khoản [490k](price) [thay màn hình điện thoại](pro_name) thành [530k](price).
+    - Thay đổi giao dịch [830k](price) [trang phục dự tiệc](pro_name) thành [880k](price).
+    - Sửa khoản chi [2,3 triệu](price) [máy tính bảng](pro_name) thành [2,5 triệu](price).
+    - Chỉnh giao dịch [410k](price) [đồ dùng văn phòng](pro_name) thành [450k](price).
+    - Tôi muốn sửa khoản [1,65 triệu](price) [thiết bị âm thanh](pro_name) thành [1,8 triệu](price).
+    - Thay đổi khoản [580k](price) [giày thể thao](pro_name) thành [620k](price).
+    - Sửa giao dịch [250k](price) [sách tiếng Anh](pro_name) thành [280k](price).
+    - Chỉnh khoản chi [3,4 triệu](price) [macbook cũ](pro_name) thành [3,6 triệu](price).
+    - Tôi cần sửa khoản thu [7 triệu](price) [bán xe](pro_name) thành [7,5 triệu](price).
+    - Thay đổi giao dịch [350k](price) [đồ trang điểm](pro_name) thành [380k](price).
+    - Sửa khoản chi [1,5 triệu](price) [quạt điều hòa](pro_name) thành [1,65 triệu](price).
+    - Chỉnh giao dịch [230k](price) [đồ ăn vặt](pro_name) [tuần này](date) thành [260k](price).
+    - Tôi muốn sửa khoản [640k](price) [loa bluetooth](pro_name) thành [690k](price).
+    - Thay đổi khoản [2,1 triệu](price) [sửa nhà vệ sinh](pro_name) thành [2,3 triệu](price).
+    - Sửa giao dịch [470k](price) [mua váy](pro_name) thành [520k](price).
+    - Chỉnh khoản chi [890k](price) [tai nghe](pro_name) thành [950k](price).
+    - Tôi cần sửa khoản [1,7 triệu](price) [iPad cũ](pro_name) thành [1,85 triệu](price).
+    - Thay đổi giao dịch [300k](price) [tiệc công ty](pro_name) [cuối tháng](date) thành [350k](price).
+    - Sửa khoản thu [4 triệu](price) [thu nợ](pro_name) thành [4,2 triệu](price).
+    - Chỉnh giao dịch [760k](price) [đồng hồ](pro_name) thành [800k](price).
+    - Tôi muốn sửa khoản [1,95 triệu](price) [máy lọc không khí](pro_name) thành [2,1 triệu](price).
+    - Thay đổi khoản [530k](price) [khám nha khoa](pro_name) thành [580k](price).
+    - Sửa giao dịch [360k](price) [vitamin](pro_name) thành [390k](price).
+    - Chỉnh khoản chi [2,6 triệu](price) [laptop](pro_name) thành [2,8 triệu](price).
+    - Tôi cần sửa khoản [190k](price) [phim chiếu rạp](pro_name) [hôm qua](date) thành [220k](price).
+    - Thay đổi giao dịch [950k](price) [thiết bị y tế](pro_name) thành [1 triệu](price).
+    - Sửa khoản chi [480k](price) [đồ trang sức](pro_name) thành [520k](price).
+    - Chỉnh giao dịch [1,35 triệu](price) [ghế văn phòng](pro_name) thành [1,5 triệu](price).
+    - Tôi muốn sửa khoản thu [10 triệu](price) [tiền thưởng](pro_name) thành [10,5 triệu](price).
+    - Thay đổi khoản [270k](price) [nạp tiền điện thoại](pro_name) thành [300k](price).
+    - Sửa giao dịch [620k](price) [mua quà](pro_name) [sinh nhật bạn](date) thành [680k](price).
+    - Chỉnh khoản chi [3,2 triệu](price) [iPhone cũ](pro_name) thành [3,4 triệu](price).
+    - Tôi cần sửa khoản [440k](price) [khám mắt](pro_name) thành [480k](price).
+    - Thay đổi giao dịch [1,4 triệu](price) [tủ sách](pro_name) thành [1,55 triệu](price).
+    - Sửa khoản chi [740k](price) [dụng cụ thể thao](pro_name) thành [790k](price).
+    - Chỉnh giao dịch [220k](price) [đồ dùng học tập](pro_name) thành [250k](price).
+    - Tôi muốn sửa khoản [3,7 triệu](price) [máy giặt mới](pro_name) thành [3,9 triệu](price).
+    - Thay đổi khoản thu [8,5 triệu](price) [lương phụ](pro_name) thành [9 triệu](price).
+    - Sửa giao dịch [570k](price) [đồ chơi trẻ em](pro_name) thành [620k](price).
+    - Chỉnh khoản chi [1,2 triệu](price) [vé tàu](pro_name) thành [1,3 triệu](price).
+    - Tôi cần sửa khoản [330k](price) [thẻ điện thoại](pro_name) thành [360k](price).
+    - Thay đổi giao dịch [880k](price) [vé du lịch](pro_name) thành [950k](price).
+
+- intent: search_transaction
+  examples: |
+    - Tìm giao dịch [200k](price) tôi chi cho [ăn uống](pro_name) [hôm nay](date).
+    - Cho tôi xem khoản chi [500k](price) mua [quần áo](pro_name).
+    - Tìm khoản [5 triệu](price) tôi trả cho [thuê nhà](pro_name) tháng này.
+    - Tôi muốn xem giao dịch [300k](price) đi [siêu thị](pro_name).
+    - Kiểm tra khoản chi [150k](price) tiền [cà phê](pro_name) [hôm qua](date).
+    - Tìm giao dịch [200k](price) cho [sửa xe](pro_name) tuần trước.
+    - Cho tôi xem [1 triệu](price) tôi chi cho [vé máy bay](pro_name).
+    - Tìm khoản thu nhập [10 triệu](price) từ [lương](pro_name).
+    - Kiểm tra [2 triệu](price) tiền [thưởng](pro_name) tôi nhận được.
+    - Tìm khoản [400k](price) cho [bữa tối](pro_name) tại [nhà hàng](location).
+    - Cho tôi xem giao dịch [500k](price) chuyển khoản cho [bạn tôi](pro_name).
+    - Tìm [250k](price) tiền [xăng](pro_name) [tuần này](date).
+    - Kiểm tra hóa đơn [điện nước](pro_name) [1,2 triệu](price).
+    - Tìm khoản chi [1 triệu](price) mua [điện thoại](pro_name).
+    - Cho tôi xem [300k](price) tiền [sách](pro_name) [hôm nay](date).
+    - Tìm giao dịch [450k](price) cho [vé xem phim](pro_name).
+    - Kiểm tra [2 triệu](price) [học phí](pro_name) [tháng này](date).
+    - Tìm khoản thu [5 triệu](price) từ [freelance](pro_name).
+    - Cho tôi xem [600k](price) mua [đồ trang trí](pro_name).
+    - Tìm [350k](price) tiền [bảo trì xe](pro_name) tuần trước.
+    - Kiểm tra khoản [250k](price) mua [sách](pro_name) [hôm qua](date).
+    - Tìm [1 triệu](price) tiền [thuê nhà](pro_name) [tháng này](date).
+    - Cho tôi xem [500k](price) tiền [điện](pro_name).
+    - Tìm giao dịch [700k](price) mua [giày](pro_name).
+    - Kiểm tra [350k](price) [bữa tối](pro_name) tại [Hà Nội](location).
+    - Tìm [100k](price) nạp [điện thoại](pro_name) [hôm nay](date).
+    - Cho tôi xem [1,5 triệu](price) [sửa xe](pro_name) tuần này.
+    - Tìm khoản [400k](price) mua [mỹ phẩm](pro_name).
+    - Kiểm tra [200k](price) [vé xem phim](pro_name) [thứ Sáu](date).
+    - Tìm [3 triệu](price) tiền [khách sạn](pro_name).
+    - Cho tôi xem [850k](price) mua [quà sinh nhật](pro_name).
+    - Tìm khoản [1 triệu](price) [học phí](pro_name) tháng trước.
+    - Kiểm tra [8 triệu](price) từ [đầu tư](pro_name).
+    - Tìm [500k](price) tiền [xăng](pro_name) [tuần trước](date).
+    - Cho tôi xem [4 triệu](price) [vé máy bay](pro_name).
+    - Tìm giao dịch [3 triệu](price) chuyển cho [mẹ](pro_name).
+    - Kiểm tra [25 triệu](price) mua [laptop](pro_name).
+    - Tìm [700k](price) hóa đơn [nước](pro_name).
+    - Cho tôi xem khoản thu [12 triệu](price) từ [lương](pro_name).
+    - Tìm [2 triệu](price) tiền [thuê nhà](pro_name) [tháng này](date).
+    - Kiểm tra [1,2 triệu](price) [bảo hiểm xe](pro_name).
+    - Tìm khoản [300k](price) [đồ ăn vặt](pro_name) [hôm nay](date).
+    - Cho tôi xem [1 triệu](price) mua [bàn phím](pro_name).
+    - Tìm [2,5 triệu](price) [khóa học online](pro_name).
+    - Kiểm tra khoản thu [15 triệu](price) [thưởng cuối năm](pro_name).
+    - Tìm [450k](price) mua [đồng hồ](pro_name).
+    - Cho tôi xem [600k](price) [ăn tối](pro_name) [hôm nay](date).
+    - Tìm giao dịch [200k](price) [điện thoại](pro_name).
+    - Kiểm tra [1 triệu](price) [vé tàu](pro_name).
+    - Tìm [2 triệu](price) mua [tai nghe](pro_name).
+    - Cho tôi xem [1,8 triệu](price) [du lịch Đà Lạt](pro_name) [tháng này](date).
+    - Tìm khoản [900k](price) [bảo hiểm sức khỏe](pro_name).
+    - Kiểm tra [350k](price) [ăn trưa](pro_name) [hôm qua](date).
+    - Tìm [2,3 triệu](price) [vé concert](pro_name).
+    - Cho tôi xem khoản thu [7 triệu](price) [bán hàng online](pro_name).
+    - Tìm [1,7 triệu](price) mua [máy ảnh](pro_name).
+    - Kiểm tra [400k](price) [taxi](pro_name) [tuần trước](date).
+    - Tìm [800k](price) [đồ gia dụng](pro_name).
+    - Cho tôi xem [600k](price) [bữa tiệc sinh nhật](pro_name).
+    - Tìm khoản [1,5 triệu](price) [nha khoa](pro_name).
+    - Kiểm tra [3,5 triệu](price) từ [part-time](pro_name).
+    - Tìm [250k](price) mua [hoa](pro_name) [hôm nay](date).
+    - Cho tôi xem [700k](price) [vé sự kiện](pro_name).
+    - Tìm [2 triệu](price) [khóa học tiếng Anh](pro_name).
+    - Kiểm tra [1,3 triệu](price) [máy in](pro_name).
+    - Tìm khoản thu [4 triệu](price) [freelance](pro_name).
+    - Cho tôi xem [500k](price) [ăn uống](pro_name) tại [quán quen](location).
+    - Tìm [800k](price) [bảo dưỡng ô tô](pro_name).
+    - Kiểm tra [300k](price) [trà sữa](pro_name) [hôm nay](date).
+    - Tìm [150k](price) [vé xe buýt](pro_name).
+    - Cho tôi xem khoản thu [2,8 triệu](price) [tiền thưởng dự án](pro_name).
+    - Tìm [1 triệu](price) [đồ chơi trẻ em](pro_name).
+    - Kiểm tra [450k](price) [ăn tối](pro_name) tại [Sài Gòn](location).
+    - Tìm [3 triệu](price) [thuê văn phòng](pro_name).
+    - Cho tôi xem [200k](price) [đồ ăn sáng](pro_name) [hôm qua](date).
+    - Tìm khoản [1,2 triệu](price) [thiết bị âm thanh](pro_name).
+    - Kiểm tra [600k](price) [vé hội chợ](pro_name).
+    - Tìm [6 triệu](price) từ [thiết kế](pro_name).
+    - Cho tôi xem [350k](price) [đồ uống](pro_name) [tuần này](date).
+    - Tìm [2,5 triệu](price) [tour du lịch](pro_name).
+    - Kiểm tra [1 triệu](price) [đồ điện tử](pro_name).
+    - Tìm [3,2 triệu](price) [ghế sofa](pro_name).
+    - Cho tôi xem [500k](price) [bữa trưa](pro_name) tại [Hà Nội](location).
+    - Tìm [700k](price) [máy xay sinh tố](pro_name).
+    - Kiểm tra [1,5 triệu](price) [vé tàu cao tốc](pro_name).
+    - Tìm khoản thu [8 triệu](price) [lương OT](pro_name).
+    - Cho tôi xem [400k](price) [ăn vặt](pro_name) [hôm nay](date).
+    - Tìm [2 triệu](price) [máy giặt](pro_name).
+    - Kiểm tra [300k](price) [vé công viên](pro_name).
+    - Tìm [1,8 triệu](price) [đồng hồ đeo tay](pro_name).
+    - Cho tôi xem [600k](price) [ăn uống](pro_name) tại [quán hải sản](location).
+    - Tìm [1 triệu](price) [khóa học nấu ăn](pro_name).
+    - Kiểm tra [2,7 triệu](price) [vé máy bay nội địa](pro_name).
+    - Tìm khoản thu [5 triệu](price) [tiền lãi đầu tư](pro_name).
+    - Cho tôi xem [450k](price) [bữa tối](pro_name) [thứ Sáu](date).
+    - Tìm giao dịch [350k](price) tiền [ăn trưa](pro_name) [hôm nay](date).
+    - Kiểm tra khoản chi [700k](price) mua [quần áo](pro_name) [tuần trước](date).
+    - Tôi muốn xem giao dịch [5 triệu](price) [thuê nhà](pro_name) [tháng này](date).
+    - Tìm khoản thanh toán [650k](price) tiền [điện](pro_name).
+    - Cho tôi xem giao dịch [1,8 triệu](price) mua [điện thoại](pro_name).
+    - Tìm khoản chi [280k](price) [xăng xe](pro_name) [tuần này](date).
+    - Kiểm tra giao dịch [450k](price) [ăn tối](pro_name) [hôm qua](date).
+    - Tôi muốn xem khoản [2,5 triệu](price) [sửa xe](pro_name).
+    - Tìm giao dịch [180k](price) [cà phê](pro_name) với đồng nghiệp.
+    - Kiểm tra khoản chi [950k](price) [khám bệnh](pro_name) [tháng trước](date).
+    - Cho tôi xem giao dịch [7 triệu](price) tiền [lương](pro_name).
+    - Tìm khoản [420k](price) mua [sách](pro_name) [tuần này](date).
+    - Tôi muốn kiểm tra giao dịch [750k](price) [mua giày](pro_name).
+    - Tìm khoản chi [1,5 triệu](price) [sửa máy tính](pro_name).
+    - Xem giao dịch [320k](price) [ăn trưa công ty](pro_name) [hôm qua](date).
+    - Tìm khoản thanh toán [980k](price) [bảo hiểm y tế](pro_name).
+    - Kiểm tra giao dịch [540k](price) [đồ thể thao](pro_name) [tháng này](date).
+    - Tôi muốn xem khoản chi [210k](price) [ăn sáng](pro_name) [cuối tuần](date).
+    - Tìm giao dịch nhận [15 triệu](price) tiền [thưởng](pro_name).
+    - Kiểm tra khoản [1,2 triệu](price) [vé máy bay](pro_name) [tháng sau](date).
+    - Cho tôi xem giao dịch [620k](price) [mua quà](pro_name) [sinh nhật bạn](date).
+    - Tìm khoản chi [390k](price) [phí gửi xe](pro_name) [tháng này](date).
+    - Tôi muốn kiểm tra giao dịch [2,7 triệu](price) mua [điều hòa](pro_name).
+    - Tìm khoản [860k](price) mua [đồng hồ](pro_name).
+    - Kiểm tra giao dịch [370k](price) [mỹ phẩm](pro_name) [tuần này](date).
+    - Cho tôi xem khoản chi [2,3 triệu](price) [máy tính bảng](pro_name).
+    - Tìm giao dịch [240k](price) [thuốc men](pro_name) [tháng trước](date).
+    - Tôi muốn kiểm tra khoản [3,5 triệu](price) [đặt tour du lịch](pro_name).
+    - Tìm khoản chi [480k](price) [phụ kiện máy tính](pro_name).
+    - Xem giao dịch [680k](price) [vé xem phim](pro_name) [cuối tuần](date).
+    - Kiểm tra khoản [1,65 triệu](price) [thiết bị âm thanh](pro_name).
+    - Tôi muốn xem giao dịch [590k](price) [dụng cụ nhà bếp](pro_name).
+    - Tìm khoản [8 triệu](price) từ [bán đồ cũ](pro_name).
+    - Kiểm tra giao dịch [490k](price) [thay màn hình điện thoại](pro_name).
+    - Cho tôi xem khoản chi [920k](price) [vé tàu](pro_name).
+    - Tìm giao dịch [260k](price) [trà sữa](pro_name) với bạn bè.
+    - Tôi muốn kiểm tra khoản [4,5 triệu](price) [đặt cọc](pro_name).
+    - Tìm khoản chi [730k](price) [kính mắt](pro_name) [tháng này](date).
+    - Xem giao dịch [1,45 triệu](price) [đồ nội thất](pro_name).
+    - Kiểm tra khoản [380k](price) [sách tham khảo](pro_name) cho con.
+    - Tôi muốn xem giao dịch [2,8 triệu](price) [sửa nhà](pro_name).
+    - Tìm khoản chi [310k](price) [hoa tươi](pro_name) [hôm qua](date).
+    - Kiểm tra giao dịch [1,9 triệu](price) [máy giặt](pro_name).
+    - Cho tôi xem khoản [570k](price) [đồ chơi trẻ em](pro_name).
+    - Tìm giao dịch [12 triệu](price) [lương](pro_name) [tháng này](date).
+    - Tôi muốn kiểm tra khoản chi [440k](price) [khám mắt](pro_name).
+    - Tìm khoản [1,8 triệu](price) [máy ảnh](pro_name).
+    - Xem giao dịch [510k](price) [phụ tùng xe](pro_name).
+    - Kiểm tra khoản [830k](price) [trang phục dự tiệc](pro_name).
+    - Tôi muốn xem giao dịch [290k](price) [thay pin điện thoại](pro_name).
+    - Tìm khoản chi [1,55 triệu](price) [khóa học online](pro_name).
+    - Kiểm tra giao dịch [650k](price) [đồng hồ](pro_name).
+    - Cho tôi xem khoản [3,6 triệu](price) [tủ lạnh](pro_name).
+    - Tìm giao dịch [410k](price) [đồ dùng văn phòng](pro_name).
+    - Tôi muốn kiểm tra khoản [790k](price) [mua giày](pro_name) [tuần trước](date).
+    - Tìm khoản thu [6 triệu](price) [freelance](pro_name).
+    - Xem giao dịch [250k](price) [sách tiếng Anh](pro_name).
+    - Kiểm tra khoản [3,4 triệu](price) [Macbook cũ](pro_name).
+    - Tôi muốn xem giao dịch [350k](price) [đồ trang điểm](pro_name).
+    - Tìm khoản chi [1,5 triệu](price) [quạt điều hòa](pro_name).
+    - Kiểm tra giao dịch [230k](price) [đồ ăn vặt](pro_name) [tuần này](date).
+    - Cho tôi xem khoản [640k](price) [loa bluetooth](pro_name).
+    - Tìm giao dịch [2,1 triệu](price) [sửa nhà vệ sinh](pro_name).
+    - Tôi muốn kiểm tra khoản [470k](price) [mua váy](pro_name).
+    - Tìm khoản [890k](price) [tai nghe](pro_name).
+    - Xem giao dịch [1,7 triệu](price) [iPad cũ](pro_name).
+    - Kiểm tra khoản [300k](price) [tiệc công ty](pro_name) [cuối tháng](date).
+    - Tôi muốn xem giao dịch thu [4 triệu](price) [thu nợ](pro_name).
+    - Tìm khoản chi [760k](price) [đồng hồ](pro_name) mới mua.
+    - Kiểm tra giao dịch [1,95 triệu](price) [máy lọc không khí](pro_name).
+    - Cho tôi xem khoản [530k](price) [khám nha khoa](pro_name) [tuần trước](date).
+    - Tìm giao dịch [360k](price) [vitamin](pro_name).
+    - Tôi muốn kiểm tra khoản [2,6 triệu](price) [laptop](pro_name).
+    - Tìm khoản chi [190k](price) [phim chiếu rạp](pro_name) [hôm qua](date).
+    - Xem giao dịch [950k](price) [thiết bị y tế](pro_name).
+    - Kiểm tra khoản [480k](price) [đồ trang sức](pro_name).
+    - Tôi muốn xem giao dịch [1,35 triệu](price) [ghế văn phòng](pro_name).
+    - Tìm khoản thu [10 triệu](price) [tiền thưởng](pro_name).
+    - Kiểm tra giao dịch [270k](price) [nạp tiền điện thoại](pro_name).
+    - Cho tôi xem khoản chi [670k](price) [quà sinh nhật](pro_name).
+    - Tìm giao dịch [3,2 triệu](price) [iPhone cũ](pro_name).
+    - Tôi muốn kiểm tra khoản [440k](price) [khám răng](pro_name).
+    - Tìm khoản [1,4 triệu](price) [tủ sách](pro_name).
+    - Xem giao dịch [740k](price) [dụng cụ thể thao](pro_name).
+    - Kiểm tra khoản [220k](price) [đồ dùng học tập](pro_name) [tuần này](date).
+    - Tôi muốn xem giao dịch [3,7 triệu](price) [máy giặt mới](pro_name).
+    - Tìm khoản thu [8,5 triệu](price) [lương phụ](pro_name).
+    - Kiểm tra giao dịch [880k](price) [vé du lịch](pro_name).
+    - Cho tôi xem khoản [320k](price) [thuốc cảm](pro_name).
+    - Tìm giao dịch [1,25 triệu](price) [bàn học](pro_name) cho con.
+    - Tôi muốn kiểm tra khoản [580k](price) [giày thể thao](pro_name).
+    - Tìm khoản chi [1,1 triệu](price) [bàn làm việc](pro_name).
+    - Xem giao dịch [430k](price) [quà tặng](pro_name) [tháng này](date).
+    - Kiểm tra khoản [2,4 triệu](price) [đàn piano](pro_name).
+    - Tôi muốn xem giao dịch [450k](price) [sách nấu ăn](pro_name).
+    - Tìm khoản [2,2 triệu](price) [sửa xe](pro_name) [tháng trước](date).
+    - Kiểm tra giao dịch [560k](price) [ăn tối](pro_name) [cuối tuần](date).
+    - Cho tôi xem khoản thu [9 triệu](price) [tiền lương](pro_name) [tháng trước](date).
+    - Tìm giao dịch [340k](price) [đồ dùng học tập](pro_name).
+    - Tôi muốn kiểm tra khoản [780k](price) [giày thể thao](pro_name).
+    - Tìm khoản chi [270k](price) [đồ uống](pro_name) [cuối tuần](date).
+    - Xem giao dịch [3,8 triệu](price) [mua laptop](pro_name).
+    - Kiểm tra khoản [420k](price) [xăng xe](pro_name) [tuần này](date).
+    - Tôi muốn xem giao dịch [1,6 triệu](price) [điện thoại](pro_name).
+    - Tìm khoản [275k](price) [sách](pro_name) mới mua.
+    - Kiểm tra giao dịch [750k](price) [mua quần áo](pro_name).
+    - Cho tôi xem khoản chi [350k](price) [ăn trưa](pro_name) [hôm nay](date).
+
+- intent: out_of_scope
+  examples: |
+    - Hôm nay thời tiết thế nào?
+    - Làm sao để nấu món bò kho ngon?
+    - Có quán cafe nào mở 24/7 gần đây không?
+    - Cách tối ưu hóa thuật toán sắp xếp là gì?
+    - Bạn có thể dạy tôi cách lập trình C++ không?
+    - Dự báo giá Bitcoin tuần tới như thế nào?
+    - Có bộ phim nào hay trên Netflix không?
+    - Tôi muốn đặt vé máy bay đi Đà Lạt, bạn giúp tôi được không?
+    - Bạn nghĩ ai sẽ vô địch Cúp C1 năm nay?
+    - Hôm nay có tin tức gì nóng không?
+    - Làm thế nào để giảm cân nhanh?
+    - Bạn có biết bài hát nào giúp thư giãn không?
+    - Tôi có thể tìm một bác sĩ chuyên khoa tim ở đâu?
+    - Có trò chơi nào giống GTA 5 không?
+    - Tôi muốn đặt bàn tại một nhà hàng sang trọng, bạn giúp tôi không?
+    - Có sự kiện âm nhạc nào diễn ra vào cuối tuần này không?
+    - Bạn có thể viết một bài luận về AI giúp tôi không?
+    - Làm sao để xin visa đi Mỹ dễ dàng?
+    - Tôi có thể học tiếng Nhật miễn phí ở đâu?
+    - Dự đoán giá xăng dầu trong tháng tới?
+    - Bạn nghĩ sao về tình hình kinh tế hiện nay?
+    - Giữa iPhone 15 và Samsung S24, cái nào tốt hơn?
+    - Hướng dẫn cách sửa lỗi màn hình xanh trên Windows?
+    - Có cách nào làm bánh trung thu tại nhà không?
+    - Tôi muốn đặt một chuyến du lịch châu Âu, có gợi ý nào không?
+    - Bạn có thể cho tôi biết thời tiết hôm nay không?
+    - Làm thế nào để giảm cân hiệu quả?
+    - Có bộ phim nào hay đang chiếu rạp không?
+    - Hôm nay có tin tức gì nổi bật?
+    - Bạn có thể hướng dẫn tôi cách lập trình Python không?
+    - Tôi có thể đặt bàn tại nhà hàng gần đây không?
+    - Làm sao để xin visa du học Mỹ?
+    - Dự báo giá vàng trong tuần tới là bao nhiêu?
+    - Tôi muốn tìm quán cà phê đẹp ở Hà Nội.
+    - Bạn có thể cho tôi biết lịch thi đấu bóng đá hôm nay không?
+    - Hướng dẫn cách sửa lỗi trên iPhone 15.
+    - Có sự kiện âm nhạc nào diễn ra vào cuối tuần này không?
+    - Tôi có thể đặt vé máy bay trực tuyến ở đâu?
+    - Làm thế nào để tối ưu hóa SEO cho website?
+    - Bạn có thể dạy tôi chơi đàn guitar không?
+    - Tôi muốn tìm một bác sĩ chuyên khoa nội tổng quát.
+    - Có cách nào để làm bánh pizza tại nhà không?
+    - Giữa MacBook Air và MacBook Pro, cái nào tốt hơn?
+    - Bạn có thể giúp tôi viết một bài luận về công nghệ AI không?
+    - Dự báo thời tiết cuối tuần này như thế nào?
+    - Tôi muốn tìm khóa học lập trình miễn phí.
+    - Làm sao để học tiếng Anh giao tiếp nhanh?
+    - Tôi có thể xem tử vi của tôi hôm nay không?
+    - Bạn nghĩ ai sẽ thắng trong trận chung kết Champions League?
+    - Tôi muốn biết cách mở tài khoản chứng khoán.
+    - Có cách nào tăng tốc máy tính Windows không?
+    - Tôi có thể tìm phòng khách sạn giá rẻ ở đâu?
+    - Hướng dẫn cách nấu phở bò truyền thống.
+    - Làm sao để đăng ký học lái xe ô tô?
+    - Bạn có thể dự đoán giá Bitcoin vào cuối năm nay không?
+    - Hôm nay có trận bóng nào đáng xem không?
+    - Làm sao để chăm sóc cây cảnh trong nhà?
+    - Tôi muốn mua vé xem phim, bạn đặt giúp tôi được không?
+    - Có cách nào để học vẽ miễn phí không?
+    - Bạn nghĩ thị trường bất động sản năm nay thế nào?
+    - Hướng dẫn cách cài đặt Ubuntu trên máy tính?
+    - Tôi muốn tìm một công thức làm bánh mì ngon.
+    - Có quán ăn nào nổi tiếng ở Đà Nẵng không?
+    - Làm sao để chụp ảnh đẹp bằng điện thoại?
+    - Bạn có thể cho tôi lời khuyên về đầu tư chứng khoán không?
+    - Tôi muốn học nấu ăn online, có khóa nào hay không?
+    - Dự báo thời tiết ở Sài Gòn tuần này ra sao?
+    - Có cách nào để sửa lỗi wifi trên laptop không?
+    - Tôi muốn đặt tour đi Phú Quốc, bạn giúp tôi được không?
+    - Bạn có thể kể tôi nghe một câu chuyện cười không?
+    - Làm sao để làm đẹp da mặt tại nhà?
+    - Có ứng dụng nào học tiếng Hàn miễn phí không?
+    - Tôi muốn xem lịch chiếu phim rạp gần đây.
+    - Bạn nghĩ giá nhà đất sẽ tăng hay giảm?
+    - Hướng dẫn cách làm video trên TikTok?
+    - Tôi có thể tìm giáo viên yoga ở đâu?
+    - Có cách nào để làm sạch nhà nhanh không?
+    - Bạn có thể dự đoán kết quả trận bóng tối nay không?
+    - Tôi muốn học cách pha cà phê, bạn chỉ tôi được không?
+    - Làm sao để kiểm tra sức khỏe tại nhà?
+    - Có quán trà sữa nào ngon ở Hà Nội không?
+    - Bạn nghĩ tôi nên mua xe máy hãng nào?
+    - Hướng dẫn cách sử dụng Photoshop cơ bản?
+    - Tôi muốn đặt vé tàu đi Huế, bạn giúp tôi không?
+    - Có cách nào để tiết kiệm điện trong nhà không?
+    - Bạn có thể cho tôi gợi ý quà sinh nhật không?
+    - Làm sao để chăm sóc tóc hư tổn?
+    - Tôi muốn tìm một công việc part-time, có gợi ý nào không?
+    - Dự báo giá dầu hỏa tháng này thế nào?
+    - Có ứng dụng nào giúp quản lý thời gian không?
+    - Bạn có thể dạy tôi cách vẽ anime không?
+    - Tôi muốn kiểm tra tốc độ internet, làm sao đây?
+    - Hôm nay có sự kiện gì đặc biệt không?
+    - Làm sao để làm bánh flan ngon tại nhà?
+    - Bạn nghĩ tôi nên học ngành nào ở đại học?
+    - Tôi có thể tìm sách học lập trình ở đâu?
+    - Có cách nào để ngủ ngon hơn không?
+    - Bạn có thể cho tôi lịch sử giá vàng không?
+
+synonyms:
+- synonym: 200000
+  examples: |
+    - 200k
+    - 200 nghìn
+    - 200.000đ
+    - 200.000 đồng
+    - hai trăm nghìn
+
+- synonym: 1000000
+  examples: |
+    - 1 triệu
+    - 1tr
+    - 1.000.000đ
+    - một triệu đồng
+    - 1.000k
+
+- synonym: hôm nay
+  examples: |
+    - ngày hôm nay
+    - bữa nay
+    - sáng nay
+    - chiều nay
+    - tối nay
+    
+lookup_tables:
+- name: common_expenses
+  elements:
+    - ăn uống
+    - điện nước
+    - xăng xe
+    - mua sắm
+    - thuê nhà
+    - giáo dục
+    - đi lại
+    - sức khỏe
+    - giải trí
+
+- name: date_references
+  elements:
+    - hôm nay
+    - hôm qua
+    - ngày mai
+    - tuần này
+    - tuần trước
+    - tuần sau
+    - tháng này
+    - tháng trước
+    - quý này
+    - năm nay
